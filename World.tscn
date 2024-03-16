@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://bicmrha1xd50i"]
 
-[ext_resource type="Texture2D" path="res://Asset/Tilesets/Water.png" id="1_gymo0"]
+[ext_resource type="Texture2D" uid="uid://cftc2how71bcj" path="res://Asset/Tilesets/ground tiles/water frames/Water.png" id="1_gymo0"]
 [ext_resource type="Script" path="res://Scripts/Background.gd" id="1_ouppl"]
-[ext_resource type="TileSet" uid="uid://cbqylrqkb4sgh" path="res://Asset/Tilesets/World.tres" id="2_8lyn5"]
-[ext_resource type="Texture2D" path="res://Asset/Tilesets/Bitmask references 2.png" id="4_mo2hl"]
+[ext_resource type="TileSet" uid="uid://cbqylrqkb4sgh" path="res://World.tres" id="2_8lyn5"]
+[ext_resource type="Texture2D" uid="uid://f7wye47l1pl2" path="res://Asset/Tilesets/ground tiles/Bitmask references 2.png" id="4_mo2hl"]
 
 [node name="World" type="Node2D"]
 
