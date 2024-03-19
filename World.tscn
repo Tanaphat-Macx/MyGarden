@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bicmrha1xd50i"]
+[gd_scene load_steps=9 format=3 uid="uid://bicmrha1xd50i"]
 
 [ext_resource type="TileSet" uid="uid://garr6jg8btnu" path="res://Asset/Tilesets/TilesSave/Ground.tres" id="1_4kbis"]
 [ext_resource type="Texture2D" uid="uid://cftc2how71bcj" path="res://Asset/Tilesets/ground tiles/water frames/Water.png" id="1_gymo0"]
 [ext_resource type="Script" path="res://Scripts/Background.gd" id="1_ouppl"]
+[ext_resource type="PackedScene" uid="uid://bq30tt7uunqa2" path="res://Scene/player.tscn" id="2_cl1jv"]
 [ext_resource type="Texture2D" uid="uid://f7wye47l1pl2" path="res://Asset/Tilesets/ground tiles/Bitmask references 2.png" id="4_mo2hl"]
 [ext_resource type="Texture2D" uid="uid://cpy2ucr5dqqgp" path="res://Asset/Tilesets/ground tiles/New tiles/TILE LAYER EXAMPLE.png" id="8_1img6"]
 [ext_resource type="Texture2D" uid="uid://bknxb0x1a6s3k" path="res://Asset/Tilesets/ground tiles/New tiles/TILES PREVIEW v.2.png" id="9_wlwwb"]
@@ -19,6 +20,9 @@ layer_1/name = "Ground_Hill"
 layer_1/tile_data = PackedInt32Array(262149, 3, 0, 327685, 3, 1, 393221, 3, 1, 458757, 3, 1, 524293, 3, 1, 589829, 3, 1, 262150, 65539, 0, 262151, 65539, 0, 262152, 65539, 0, 262153, 65539, 0, 262154, 65539, 0, 262155, 65539, 0, 262156, 131075, 0, 327692, 327683, 2, 393228, 65539, 1, 458764, 65539, 1, 458763, 65539, 1, 524298, 65539, 1, 524297, 65539, 1, 524296, 65539, 1, 524295, 65539, 1, 524294, 65539, 1, 589830, 65539, 1, 655366, 65539, 2, 655367, 65539, 2, 589831, 65539, 1, 589832, 65539, 1, 589833, 65539, 1, 589834, 65539, 1, 589835, 65539, 1, 524301, 327683, 2, 524302, 65539, 0, 393227, 65539, 1, 327691, 65539, 1, 458762, 65539, 1, 393226, 65539, 1, 327690, 65539, 1, 458761, 65539, 1, 393225, 65539, 1, 327689, 65539, 1, 458760, 65539, 1, 393224, 65539, 1, 327688, 65539, 1, 458759, 65539, 1, 393223, 65539, 1, 327687, 65539, 1, 458758, 65539, 1, 393222, 65539, 1, 327686, 65539, 1, 655365, 3, 2, 655372, 65539, 2, 655371, 65539, 2, 655370, 65538, 0, 655369, 2, 0, 327693, 131075, 0, 393229, 131075, 1, 458765, 131075, 1, 655373, 65539, 2, 655374, 65539, 2, 524299, 65539, 1, 524300, 65539, 1, 589836, 65539, 1, 589837, 65539, 1, 589838, 65539, 1, 524303, 131075, 0, 589839, 131075, 1, 655375, 131075, 2, 655368, 65539, 2, 720905, 2, 1, 720906, 65538, 1)
 layer_2/name = "Grpund_Slope"
 layer_2/tile_data = PackedInt32Array()
+
+[node name="Player" parent="." instance=ExtResource("2_cl1jv")]
+position = Vector2(92, 196)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 script = ExtResource("1_ouppl")
