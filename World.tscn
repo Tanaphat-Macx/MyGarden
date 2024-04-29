@@ -234,7 +234,7 @@ y_sort_enabled = true
 y_sort_enabled = true
 
 [node name="Player" parent="GroundTiles/Game" instance=ExtResource("2_cl1jv")]
-position = Vector2(92, 196)
+position = Vector2(95, 196)
 
 [node name="GridHelper" type="Sprite2D" parent="GroundTiles/Game"]
 texture = ExtResource("2_jk1ba")
