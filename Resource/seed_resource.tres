@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="SeedResource" load_steps=14 format=3 uid="uid://drpwllkjxheby"]
+
+[ext_resource type="Script" path="res://Resource/seed_resource.gd" id="1_0w0wi"]
+[ext_resource type="Resource" uid="uid://ce08llpm12g84" path="res://Resource/Seed_data/Beetroot.tres" id="2_ih6mt"]
+[ext_resource type="Resource" uid="uid://5spppjfdokbg" path="res://Resource/Seed_data/Carrot.tres" id="3_rr6ee"]
+[ext_resource type="Resource" uid="uid://u54lpuge15nn" path="res://Resource/Seed_data/Cauliflower.tres" id="4_xakhn"]
+[ext_resource type="Resource" uid="uid://cqrstke53ipm2" path="res://Resource/Seed_data/Corn.tres" id="5_xf31d"]
+[ext_resource type="Resource" uid="uid://di7cn56eo4hxf" path="res://Resource/Seed_data/Cucumber.tres" id="6_5vwca"]
+[ext_resource type="Resource" uid="uid://cpsyw0dl5aohj" path="res://Resource/Seed_data/Eggplant.tres" id="7_oja2r"]
+[ext_resource type="Resource" uid="uid://dy7o5548gho87" path="res://Resource/Seed_data/IcebergSalat.tres" id="8_0ww4i"]
+[ext_resource type="Resource" uid="uid://dbi8oqx3lhdbq" path="res://Resource/Seed_data/Pumpkin.tres" id="9_kj22s"]
+[ext_resource type="Resource" uid="uid://cjymrrm50an5i" path="res://Resource/Seed_data/Starfruit.tres" id="10_dvyi6"]
+[ext_resource type="Resource" uid="uid://7nqbkpu8x88m" path="res://Resource/Seed_data/Tomato.tres" id="11_ob4nh"]
+[ext_resource type="Resource" uid="uid://c1t02g5he0tkd" path="res://Resource/Seed_data/Turnip.tres" id="12_du8sb"]
+[ext_resource type="Resource" uid="uid://cj378t4x7y3oj" path="res://Resource/Seed_data/Wheat.tres" id="13_i8r8s"]
+
+[resource]
+script = ExtResource("1_0w0wi")
+seedList = Array[Resource("res://Resource/seed_data.gd")]([ExtResource("2_ih6mt"), ExtResource("3_rr6ee"), ExtResource("4_xakhn"), ExtResource("5_xf31d"), ExtResource("6_5vwca"), ExtResource("7_oja2r"), ExtResource("8_0ww4i"), ExtResource("9_kj22s"), ExtResource("10_dvyi6"), ExtResource("11_ob4nh"), ExtResource("12_du8sb"), ExtResource("13_i8r8s")])

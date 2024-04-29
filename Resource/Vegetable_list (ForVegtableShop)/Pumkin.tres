@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="VegetableData" load_steps=4 format=3 uid="uid://rni78helg02s"]
+
+[ext_resource type="Script" path="res://Resource/vegetable_data.gd" id="1_ocl57"]
+[ext_resource type="Texture2D" uid="uid://bhucnq7qxf1kb" path="res://Asset/Objects/Items/Vegetable/Pumpkin.tres" id="2_6k7y1"]
+[ext_resource type="Resource" uid="uid://dylu76a5er0ye" path="res://Resource/Vegetables_name/Pumkin.tres" id="3_6kayo"]
+
+[resource]
+script = ExtResource("1_ocl57")
+vegetableNameResource = ExtResource("3_6kayo")
+texture = ExtResource("2_6k7y1")
+quantity = 0

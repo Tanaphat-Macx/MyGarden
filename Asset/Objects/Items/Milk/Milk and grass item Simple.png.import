@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqxuwx1gw2sa"
-path="res://.godot/imported/fruit and berries items.png-aed6640b3e6f029f34b11e39e8bce47f.ctex"
+uid="uid://28k84xl4rkev"
+path="res://.godot/imported/Milk and grass item Simple.png-ec6b5ab99450c5f4197d2269c30b2636.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Objects/Items/fruit and berries items.png"
-dest_files=["res://.godot/imported/fruit and berries items.png-aed6640b3e6f029f34b11e39e8bce47f.ctex"]
+source_file="res://Asset/Objects/Items/Milk/Milk and grass item Simple.png"
+dest_files=["res://.godot/imported/Milk and grass item Simple.png-ec6b5ab99450c5f4197d2269c30b2636.ctex"]
 
 [params]
 

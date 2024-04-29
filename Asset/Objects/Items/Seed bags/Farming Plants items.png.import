@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duan7vhuqtxd5"
-path="res://.godot/imported/Egg items.png-dc5cb298ab4dee2d0e570965a07977cf.ctex"
+uid="uid://bwsqmdrao81m4"
+path="res://.godot/imported/Farming Plants items.png-3eedfc8bcb7d759492060cabd7835453.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Objects/Items/Egg items.png"
-dest_files=["res://.godot/imported/Egg items.png-dc5cb298ab4dee2d0e570965a07977cf.ctex"]
+source_file="res://Asset/Objects/Items/Seed bags/Farming Plants items.png"
+dest_files=["res://.godot/imported/Farming Plants items.png-3eedfc8bcb7d759492060cabd7835453.ctex"]
 
 [params]
 

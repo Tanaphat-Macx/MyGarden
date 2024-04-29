@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="VegetableData" load_steps=4 format=3 uid="uid://jvixq755fojm"]
+
+[ext_resource type="Script" path="res://Resource/vegetable_data.gd" id="1_6mf7b"]
+[ext_resource type="Texture2D" uid="uid://b7h7j2hroaqk5" path="res://Asset/Objects/Items/Vegetable/Turnip.tres" id="2_rhnma"]
+[ext_resource type="Resource" uid="uid://23j8e2l3m3xv" path="res://Resource/Vegetables_name/Turnip.tres" id="3_i0fov"]
+
+[resource]
+script = ExtResource("1_6mf7b")
+vegetableNameResource = ExtResource("3_i0fov")
+texture = ExtResource("2_rhnma")
+quantity = 0

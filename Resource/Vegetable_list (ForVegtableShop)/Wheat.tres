@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="VegetableData" load_steps=4 format=3 uid="uid://b812vxto4pmtr"]
+
+[ext_resource type="Script" path="res://Resource/vegetable_data.gd" id="1_xg8te"]
+[ext_resource type="Texture2D" uid="uid://dsqvy5n7r4rfr" path="res://Asset/Objects/Items/Vegetable/Wheat.tres" id="2_jof3l"]
+[ext_resource type="Resource" uid="uid://d26ucm2bbdfdm" path="res://Resource/Vegetables_name/Wheat.tres" id="3_tfv48"]
+
+[resource]
+script = ExtResource("1_xg8te")
+vegetableNameResource = ExtResource("3_tfv48")
+texture = ExtResource("2_jof3l")
+quantity = 0

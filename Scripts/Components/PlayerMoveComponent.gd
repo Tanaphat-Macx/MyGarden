@@ -1,6 +1,8 @@
 class_name MoveComponent
 extends CharacterBody2D
 
+signal plantSeed
+
 @export var speed: float
 @export var animation_tree: AnimationTree 
 @export var sprite_Character2D: CharacterBody2D
@@ -14,7 +16,6 @@ func _process(delta: float) -> void:
 	update_aimation_parameter()
 
 func _physics_process(delta: float) -> void:
-	
 	# Move in 4 directions
 	direction = Input.get_vector("move_left", "move_right", "move_up", "move_down").normalized()
 	
@@ -23,8 +24,12 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity = Vector2.ZERO
 		
-	move_and_slide()
+	
+	if(Input.is_action_just_pressed("plant_Seed")):
+		#plantSeed.emit()
+		emit_signal("plantSeed")
 
+	move_and_slide()
 
 func update_aimation_parameter():
 	# Find path at "AnimationTree Inspector -> Parameters -> Conditions
