@@ -47,7 +47,7 @@ func is_havestable(key) -> bool: # Key = var on dictionary
 	
 func plant_seed(coord) -> void:
 	var plant = currentSeed.instantiate()
-	get_node("Game/Vetgetables").add_child(plant)
+	get_node("Game/Plant/Vetgetables").add_child(plant)
 	plantedVetgetables[coord] = plant
 	plant.global_position = map_to_local(coord)
 	

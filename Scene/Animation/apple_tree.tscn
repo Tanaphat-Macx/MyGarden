@@ -1,0 +1,284 @@
+[gd_scene load_steps=35 format=3 uid="uid://qvlr0d6nsfyp"]
+
+[ext_resource type="PackedScene" uid="uid://c5asaw7nos45y" path="res://Scene/Animation/Base_tree.tscn" id="1_b3xr1"]
+[ext_resource type="Texture2D" uid="uid://tfxo75w77lid" path="res://Asset/Objects/Tree animations/tree_appel_sprites.png" id="2_bo2by"]
+[ext_resource type="Texture2D" uid="uid://bciu6kkg36xwx" path="res://Asset/Objects/Tree animations/tree_sprites.png" id="3_d3qi5"]
+[ext_resource type="PackedScene" uid="uid://du4gkcdwa3xlx" path="res://Scene/InteractionArea/Interaction_Area.tscn" id="5_in68e"]
+
+[sub_resource type="GDScript" id="GDScript_hjdsq"]
+script/source = "extends Node2D
+
+@onready var interaction_area: InteractionArea = $InteractionArea
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+
+
+var random_shake: int = 0
+var shake_count: int = 0
+var get_apple: bool = false
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	interaction_area.interact = Callable(self, \"_On_Interact\")
+
+func _On_Interact():
+	print(\"Player Interact\")
+	var shake: int = randf_range(0, 2)
+	random_shake = shake
+	print(random_shake)	 #check random
+	if shake_count < random_shake: 
+		animated_sprite_2d.play(\"Shake\")
+		shake_count += 1 
+	elif shake_count == random_shake:
+		animated_sprite_2d.play(\"Fall\")
+
+#How to use:
+	#Don't use \"Add child node\"
+	#Use \"Instantiate Child Scene\"
+		#- Click the chain link button in the top left of the node list
+		#- Right click -> Instantiate child scene
+		#- Drag the interaction area scene (tscn) file into the node list
+
+#If you add it as a child node, you can see that it won't have the little WiFi symbol in the node list (no signals attached). If you add it with \"Instantiate Child Scene\", it will have the little WiFi symbol, carrying over the signals you defined in the interaction area scene.
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ugg2"]
+atlas = ExtResource("2_bo2by")
+region = Rect2(0, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdm86"]
+atlas = ExtResource("2_bo2by")
+region = Rect2(48, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ea3ac"]
+atlas = ExtResource("2_bo2by")
+region = Rect2(96, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yn6ha"]
+atlas = ExtResource("2_bo2by")
+region = Rect2(144, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ht3tm"]
+atlas = ExtResource("2_bo2by")
+region = Rect2(192, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqxuc"]
+atlas = ExtResource("2_bo2by")
+region = Rect2(240, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajvd4"]
+atlas = ExtResource("2_bo2by")
+region = Rect2(288, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncnbf"]
+atlas = ExtResource("2_bo2by")
+region = Rect2(336, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6w2rn"]
+atlas = ExtResource("2_bo2by")
+region = Rect2(384, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ocho7"]
+atlas = ExtResource("2_bo2by")
+region = Rect2(432, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65jt2"]
+atlas = ExtResource("2_bo2by")
+region = Rect2(480, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mf3gv"]
+atlas = ExtResource("2_bo2by")
+region = Rect2(528, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcvns"]
+atlas = ExtResource("2_bo2by")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psfpn"]
+atlas = ExtResource("2_bo2by")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjsej"]
+atlas = ExtResource("2_bo2by")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbqiw"]
+atlas = ExtResource("2_bo2by")
+region = Rect2(144, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqvic"]
+atlas = ExtResource("3_d3qi5")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dennx"]
+atlas = ExtResource("2_bo2by")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0d1pa"]
+atlas = ExtResource("2_bo2by")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfuoh"]
+atlas = ExtResource("2_bo2by")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28skw"]
+atlas = ExtResource("2_bo2by")
+region = Rect2(96, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whxi3"]
+atlas = ExtResource("2_bo2by")
+region = Rect2(144, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pghry"]
+atlas = ExtResource("2_bo2by")
+region = Rect2(192, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1eb77"]
+atlas = ExtResource("2_bo2by")
+region = Rect2(240, 96, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_62ipy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ugg2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tdm86")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ea3ac")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yn6ha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ht3tm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqxuc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ajvd4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncnbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6w2rn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ocho7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65jt2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mf3gv")
+}],
+"loop": false,
+"name": &"Fall",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fcvns")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psfpn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjsej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bbqiw")
+}],
+"loop": false,
+"name": &"Grow",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqvic")
+}],
+"loop": false,
+"name": &"Havest_already",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dennx")
+}],
+"loop": false,
+"name": &"Idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0d1pa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hfuoh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28skw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_whxi3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pghry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1eb77")
+}],
+"loop": false,
+"name": &"Shake",
+"speed": 10.0
+}]
+
+[sub_resource type="Animation" id="Animation_g1wuj"]
+resource_name = "Apple_Shake"
+length = 3.0
+step = 0.2
+
+[sub_resource type="Animation" id="Animation_coyea"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yglvl"]
+_data = {
+"Apple_Shake": SubResource("Animation_g1wuj"),
+"RESET": SubResource("Animation_coyea")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r4kqx"]
+radius = 12.0
+
+[node name="Apple_Tree" instance=ExtResource("1_b3xr1")]
+y_sort_enabled = true
+script = SubResource("GDScript_hjdsq")
+
+[node name="Sprite2D" parent="." index="0"]
+region_rect = Rect2(8, 104, 32, 40)
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+position = Vector2(0, -4)
+sprite_frames = SubResource("SpriteFrames_62ipy")
+animation = &"Fall"
+autoplay = "Idle"
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(0, 12)
+
+[node name="AnimationPlayer" parent="." index="3"]
+libraries = {
+"": SubResource("AnimationLibrary_yglvl")
+}
+
+[node name="InteractionArea" parent="." index="5" instance=ExtResource("5_in68e")]
+position = Vector2(0, 12)
+action_name = "GET Apples"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" index="0"]
+shape = SubResource("CircleShape2D_r4kqx")
+debug_color = Color(0.32549, 0.607843, 0.4, 0.419608)

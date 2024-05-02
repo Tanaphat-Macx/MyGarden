@@ -473,7 +473,8 @@ states/walk/position = Vector2(594, 95)
 transitions = ["Idel", "walk", SubResource("AnimationNodeStateMachineTransition_syy1r"), "walk", "Idel", SubResource("AnimationNodeStateMachineTransition_ageo0"), "Start", "Idel", SubResource("AnimationNodeStateMachineTransition_5cscp")]
 graph_offset = Vector2(-236, -131)
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("animation_tree", "sprite_Character2D")]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("animation_tree", "sprite_Character2D") groups=["player"]]
+y_sort_enabled = true
 collision_layer = 2
 script = ExtResource("1_xrgr8")
 speed = 100.0

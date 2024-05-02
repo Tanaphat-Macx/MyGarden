@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://bicmrha1xd50i"]
+[gd_scene load_steps=56 format=3 uid="uid://bicmrha1xd50i"]
 
 [ext_resource type="TileSet" uid="uid://garr6jg8btnu" path="res://Asset/Tilesets/TilesSave/Ground.tres" id="1_4kbis"]
 [ext_resource type="Texture2D" uid="uid://cftc2how71bcj" path="res://Asset/Tilesets/ground tiles/water frames/Water.png" id="1_gymo0"]
@@ -53,6 +53,7 @@
 [ext_resource type="Texture2D" uid="uid://s1mhrnqf31wq" path="res://Asset/Objects/Items/Vegetable/Starfruit.tres" id="51_h5ird"]
 [ext_resource type="Texture2D" uid="uid://b7vysqdl4kh1m" path="res://Asset/Objects/Items/Vegetable/Cucumber.tres" id="52_pt7hu"]
 [ext_resource type="PackedScene" uid="uid://dcx7c0mja5ne0" path="res://Scene/Animation/door_house.tscn" id="53_7cwal"]
+[ext_resource type="PackedScene" uid="uid://qvlr0d6nsfyp" path="res://Scene/Animation/apple_tree.tscn" id="54_y62pj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vt552"]
 animations = [{
@@ -198,6 +199,11 @@ animations = [{
 "loop": true,
 "name": &"new_animation_3",
 "speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation_4",
+"speed": 5.0
 }]
 
 [node name="World" type="Node2D"]
@@ -215,7 +221,7 @@ layer_3/name = "Garden"
 layer_3/tile_data = PackedInt32Array(1048583, 65536, 1, 1114119, 65536, 2, 1114118, 0, 2, 1114120, 65536, 2, 1048584, 65536, 1, 1114121, 65536, 2, 1048585, 65536, 1, 1114122, 65536, 2, 1048586, 65536, 1, 1114123, 65536, 2, 1048587, 65536, 1, 1114124, 65536, 2, 1048588, 65536, 1, 1114125, 65536, 2, 1048589, 65536, 1, 983053, 65536, 1, 983052, 65536, 1, 983051, 65536, 1, 983050, 65536, 1, 917514, 65536, 1, 983049, 65536, 1, 983048, 65536, 1, 917512, 65536, 1, 851976, 65536, 0, 917513, 65536, 1, 851977, 65536, 0, 917515, 65536, 1, 917516, 65536, 1, 917517, 65536, 1, 983054, 131072, 1, 1048590, 131072, 1, 917518, 131072, 1, 983047, 65536, 1, 917511, 65536, 1, 983046, 0, 1, 1048582, 0, 1, 917510, 0, 1, 1114126, 131072, 2, 851978, 65536, 0, 851979, 65536, 0, 851980, 65536, 0, 851981, 65536, 0, 851982, 131072, 0, 851975, 65536, 0, 851974, 0, 0)
 layer_4/name = "Floor"
 layer_4/tile_data = PackedInt32Array(393223, 65540, 2, 393224, 65540, 2, 393225, 65540, 2, 393226, 65540, 2, 393227, 65540, 2, 458763, 65540, 2, 524299, 65540, 2, 524298, 65540, 2, 524297, 65540, 2, 524296, 65540, 2, 524295, 65540, 2, 458759, 65540, 2, 458760, 65540, 2, 458761, 65540, 2, 458762, 65540, 2)
-layer_5/name = "Building"
+layer_5/name = "Building & Oblect"
 layer_5/tile_data = PackedInt32Array(393222, 4, 2, 458758, 4, 2, 524294, 4, 3, 327686, 4, 1, 393228, 131076, 2, 458764, 131076, 2, 524300, 131076, 3, 327692, 131076, 1, 327687, 65540, 1, 327688, 65540, 0, 327689, 65540, 1, 327690, 65540, 0, 327691, 65540, 1, 524295, 65540, 0, 524296, 65540, 3, 524298, 65540, 3, 524299, 65540, 0)
 layer_6/name = "Rooftop"
 layer_6/enabled = false
@@ -228,16 +234,31 @@ currentSeed = ExtResource("3_7lx8x")
 [node name="Game" type="Node2D" parent="GroundTiles"]
 y_sort_enabled = true
 
-[node name="Vetgetables" type="Node2D" parent="GroundTiles/Game"]
+[node name="Plant" type="Node2D" parent="GroundTiles/Game"]
 
-[node name="Flowers" type="Node2D" parent="GroundTiles/Game"]
+[node name="Flowers" type="Node2D" parent="GroundTiles/Game/Plant"]
 y_sort_enabled = true
+
+[node name="Vetgetables" type="Node2D" parent="GroundTiles/Game/Plant"]
+
+[node name="Tree" type="Node2D" parent="GroundTiles/Game"]
+position = Vector2(201, 199)
+
+[node name="Apple_Tree" parent="GroundTiles/Game/Tree" instance=ExtResource("54_y62pj")]
+position = Vector2(44, -103)
+
+[node name="Apple_Tree2" parent="GroundTiles/Game/Tree" instance=ExtResource("54_y62pj")]
+position = Vector2(-112, -27)
+
+[node name="Apple_Tree3" parent="GroundTiles/Game/Tree" instance=ExtResource("54_y62pj")]
+position = Vector2(159, 1)
 
 [node name="Player" parent="GroundTiles/Game" instance=ExtResource("2_cl1jv")]
 position = Vector2(95, 196)
 
 [node name="GridHelper" type="Sprite2D" parent="GroundTiles/Game"]
 texture = ExtResource("2_jk1ba")
+region_rect = Rect2(144, 144, 32, 32)
 
 [node name="Door_house" parent="GroundTiles/Game" instance=ExtResource("53_7cwal")]
 position = Vector2(152, 136)
@@ -279,6 +300,6 @@ texture = ExtResource("10_e4oq3")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 visible = false
 sprite_frames = SubResource("SpriteFrames_vt552")
-animation = &"new_animation_3"
+animation = &"new_animation_4"
 
 [connection signal="plantSeed" from="GroundTiles/Game/Player" to="GroundTiles" method="_on_player_plant_seed"]
