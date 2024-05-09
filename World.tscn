@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://bicmrha1xd50i"]
+[gd_scene load_steps=57 format=3 uid="uid://bicmrha1xd50i"]
 
 [ext_resource type="TileSet" uid="uid://garr6jg8btnu" path="res://Asset/Tilesets/TilesSave/Ground.tres" id="1_4kbis"]
 [ext_resource type="Texture2D" uid="uid://cftc2how71bcj" path="res://Asset/Tilesets/ground tiles/water frames/Water.png" id="1_gymo0"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://Scripts/Components/Grid_Helper.gd" id="2_pdn6r"]
 [ext_resource type="PackedScene" uid="uid://d1u5quxjkrsh0" path="res://Scene/Vegetable/Carrot.tscn" id="3_7lx8x"]
 [ext_resource type="Texture2D" uid="uid://f7wye47l1pl2" path="res://Asset/Tilesets/ground tiles/Bitmask references 2.png" id="4_mo2hl"]
+[ext_resource type="PackedScene" uid="uid://v5h014milmod" path="res://Scene/InteractionArea/Object/bed.tscn" id="6_8gdpb"]
 [ext_resource type="Texture2D" uid="uid://cpy2ucr5dqqgp" path="res://Asset/Tilesets/ground tiles/New tiles/TILE LAYER EXAMPLE.png" id="8_1img6"]
 [ext_resource type="Texture2D" uid="uid://bknxb0x1a6s3k" path="res://Asset/Tilesets/ground tiles/New tiles/TILES PREVIEW v.2.png" id="9_wlwwb"]
 [ext_resource type="Texture2D" uid="uid://c00dcaemgqb6v" path="res://Asset/Tilesets/ground tiles/New tiles/TILES PREVIEW.png" id="10_e4oq3"]
@@ -221,11 +222,13 @@ layer_3/name = "Garden"
 layer_3/tile_data = PackedInt32Array(1048583, 65536, 1, 1114119, 65536, 2, 1114118, 0, 2, 1114120, 65536, 2, 1048584, 65536, 1, 1114121, 65536, 2, 1048585, 65536, 1, 1114122, 65536, 2, 1048586, 65536, 1, 1114123, 65536, 2, 1048587, 65536, 1, 1114124, 65536, 2, 1048588, 65536, 1, 1114125, 65536, 2, 1048589, 65536, 1, 983053, 65536, 1, 983052, 65536, 1, 983051, 65536, 1, 983050, 65536, 1, 917514, 65536, 1, 983049, 65536, 1, 983048, 65536, 1, 917512, 65536, 1, 851976, 65536, 0, 917513, 65536, 1, 851977, 65536, 0, 917515, 65536, 1, 917516, 65536, 1, 917517, 65536, 1, 983054, 131072, 1, 1048590, 131072, 1, 917518, 131072, 1, 983047, 65536, 1, 917511, 65536, 1, 983046, 0, 1, 1048582, 0, 1, 917510, 0, 1, 1114126, 131072, 2, 851978, 65536, 0, 851979, 65536, 0, 851980, 65536, 0, 851981, 65536, 0, 851982, 131072, 0, 851975, 65536, 0, 851974, 0, 0)
 layer_4/name = "Floor"
 layer_4/tile_data = PackedInt32Array(393223, 65540, 2, 393224, 65540, 2, 393225, 65540, 2, 393226, 65540, 2, 393227, 65540, 2, 458763, 65540, 2, 524299, 65540, 2, 524298, 65540, 2, 524297, 65540, 2, 524296, 65540, 2, 524295, 65540, 2, 458759, 65540, 2, 458760, 65540, 2, 458761, 65540, 2, 458762, 65540, 2)
-layer_5/name = "Building & Oblect"
+layer_5/name = "Building"
 layer_5/tile_data = PackedInt32Array(393222, 4, 2, 458758, 4, 2, 524294, 4, 3, 327686, 4, 1, 393228, 131076, 2, 458764, 131076, 2, 524300, 131076, 3, 327692, 131076, 1, 327687, 65540, 1, 327688, 65540, 0, 327689, 65540, 1, 327690, 65540, 0, 327691, 65540, 1, 524295, 65540, 0, 524296, 65540, 3, 524298, 65540, 3, 524299, 65540, 0)
-layer_6/name = "Rooftop"
-layer_6/enabled = false
-layer_6/tile_data = PackedInt32Array(262150, 196612, 0, 327686, 196612, 1, 393222, 196612, 2, 458758, 196612, 3, 524294, 196612, 4, 262151, 262148, 0, 327687, 262148, 1, 393223, 262148, 2, 458759, 262148, 3, 524295, 262148, 4, 262152, 262148, 0, 327688, 262148, 1, 393224, 262148, 2, 458760, 262148, 3, 524296, 262148, 4, 262153, 262148, 0, 327689, 262148, 1, 393225, 262148, 2, 458761, 262148, 3, 524297, 262148, 4, 262154, 262148, 0, 327690, 262148, 1, 393226, 262148, 2, 458762, 262148, 3, 524298, 262148, 4, 262155, 262148, 0, 327691, 262148, 1, 393227, 262148, 2, 458763, 262148, 3, 524299, 262148, 4, 262156, 327684, 0, 327692, 327684, 1, 393228, 327684, 2, 458764, 327684, 3, 524300, 327684, 4)
+layer_6/name = "Object"
+layer_6/tile_data = PackedInt32Array(327689, 65542, 0)
+layer_7/name = "Rooftop"
+layer_7/enabled = false
+layer_7/tile_data = PackedInt32Array(262150, 196612, 0, 327686, 196612, 1, 393222, 196612, 2, 458758, 196612, 3, 524294, 196612, 4, 262151, 262148, 0, 327687, 262148, 1, 393223, 262148, 2, 458759, 262148, 3, 524295, 262148, 4, 262152, 262148, 0, 327688, 262148, 1, 393224, 262148, 2, 458760, 262148, 3, 524296, 262148, 4, 262153, 262148, 0, 327689, 262148, 1, 393225, 262148, 2, 458761, 262148, 3, 524297, 262148, 4, 262154, 262148, 0, 327690, 262148, 1, 393226, 262148, 2, 458762, 262148, 3, 524298, 262148, 4, 262155, 262148, 0, 327691, 262148, 1, 393227, 262148, 2, 458763, 262148, 3, 524299, 262148, 4, 262156, 327684, 0, 327692, 327684, 1, 393228, 327684, 2, 458764, 327684, 3, 524300, 327684, 4)
 script = ExtResource("2_pdn6r")
 player = NodePath("Game/Player")
 grid_helper = NodePath("Game/GridHelper")
@@ -253,15 +256,20 @@ position = Vector2(-112, -27)
 [node name="Apple_Tree3" parent="GroundTiles/Game/Tree" instance=ExtResource("54_y62pj")]
 position = Vector2(159, 1)
 
+[node name="Interact_Area" type="Node2D" parent="GroundTiles/Game"]
+
+[node name="Door_house" parent="GroundTiles/Game/Interact_Area" instance=ExtResource("53_7cwal")]
+position = Vector2(152, 136)
+
+[node name="Bed" parent="GroundTiles/Game/Interact_Area" instance=ExtResource("6_8gdpb")]
+position = Vector2(119, 106)
+
 [node name="Player" parent="GroundTiles/Game" instance=ExtResource("2_cl1jv")]
 position = Vector2(95, 196)
 
 [node name="GridHelper" type="Sprite2D" parent="GroundTiles/Game"]
 texture = ExtResource("2_jk1ba")
 region_rect = Rect2(144, 144, 32, 32)
-
-[node name="Door_house" parent="GroundTiles/Game" instance=ExtResource("53_7cwal")]
-position = Vector2(152, 136)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 script = ExtResource("1_ouppl")
