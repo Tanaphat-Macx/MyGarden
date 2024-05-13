@@ -1,8 +1,10 @@
-[gd_scene load_steps=57 format=3 uid="uid://bicmrha1xd50i"]
+[gd_scene load_steps=60 format=3 uid="uid://bicmrha1xd50i"]
 
 [ext_resource type="TileSet" uid="uid://garr6jg8btnu" path="res://Asset/Tilesets/TilesSave/Ground.tres" id="1_4kbis"]
 [ext_resource type="Texture2D" uid="uid://cftc2how71bcj" path="res://Asset/Tilesets/ground tiles/water frames/Water.png" id="1_gymo0"]
+[ext_resource type="Script" path="res://World.gd" id="1_o5744"]
 [ext_resource type="Script" path="res://Scripts/Background.gd" id="1_ouppl"]
+[ext_resource type="Texture2D" uid="uid://djlajc2wlw4pr" path="res://Asset/UI/daynightcycle-gradient-texture.tres" id="2_41trm"]
 [ext_resource type="PackedScene" uid="uid://bq30tt7uunqa2" path="res://Scene/player.tscn" id="2_cl1jv"]
 [ext_resource type="Texture2D" uid="uid://7uexixlq4wvv" path="res://Asset/Objects/grid_selector copy.png" id="2_jk1ba"]
 [ext_resource type="Script" path="res://Scripts/Components/Grid_Helper.gd" id="2_pdn6r"]
@@ -55,6 +57,7 @@
 [ext_resource type="Texture2D" uid="uid://b7vysqdl4kh1m" path="res://Asset/Objects/Items/Vegetable/Cucumber.tres" id="52_pt7hu"]
 [ext_resource type="PackedScene" uid="uid://dcx7c0mja5ne0" path="res://Scene/Animation/door_house.tscn" id="53_7cwal"]
 [ext_resource type="PackedScene" uid="uid://qvlr0d6nsfyp" path="res://Scene/Animation/apple_tree.tscn" id="54_y62pj"]
+[ext_resource type="PackedScene" uid="uid://dqkv0h7ro8a2o" path="res://Scene/UI/day_time_label.tscn" id="58_2vt77"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vt552"]
 animations = [{
@@ -208,6 +211,13 @@ animations = [{
 }]
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_o5744")
+gradient = ExtResource("2_41trm")
+INGAME_SPEED = 10.0
+
+[node name="Daylight" type="CanvasModulate" parent="."]
+unique_name_in_owner = true
+color = Color(0.133333, 0.14902, 0.258824, 1)
 
 [node name="GroundTiles" type="TileMap" parent="." node_paths=PackedStringArray("player", "grid_helper")]
 tile_set = ExtResource("1_4kbis")
@@ -274,6 +284,10 @@ region_rect = Rect2(144, 144, 32, 32)
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 script = ExtResource("1_ouppl")
 
+[node name="Water" type="CanvasModulate" parent="ParallaxBackground"]
+unique_name_in_owner = true
+color = Color(0.133333, 0.14902, 0.258824, 1)
+
 [node name="WaterBackground" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(1280, 2.08165e-12)
 metadata/_edit_lock_ = true
@@ -310,4 +324,9 @@ visible = false
 sprite_frames = SubResource("SpriteFrames_vt552")
 animation = &"new_animation_4"
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DayTimeLabel" parent="CanvasLayer" instance=ExtResource("58_2vt77")]
+
+[connection signal="time_tick" from="." to="CanvasLayer/DayTimeLabel" method="_on_world_time_tick"]
 [connection signal="plantSeed" from="GroundTiles/Game/Player" to="GroundTiles" method="_on_player_plant_seed"]

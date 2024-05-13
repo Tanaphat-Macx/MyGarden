@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqkv0h7ro8a2o"]
+
+[ext_resource type="Script" path="res://Scripts/UI/day_time_label.gd" id="1_ehk5v"]
+[ext_resource type="Texture2D" uid="uid://cw0w2uv4l7m7f" path="res://Asset/UI/Sprite sheet for Basic Pack.png" id="1_j8a5g"]
+
+[node name="DayTimeLabel" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ehk5v")
+
+[node name="Image" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Image"]
+position = Vector2(50, 48)
+scale = Vector2(2.8, 2.4)
+texture = ExtResource("1_j8a5g")
+region_enabled = true
+region_rect = Rect2(504, 130, 36, 42)
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 98.0
+offset_bottom = 99.0
+theme_override_constants/separation = 34
+alignment = 1
+
+[node name="DayLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "  Day   1"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="TimeLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "12:00  am"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
