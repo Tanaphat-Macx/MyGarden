@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://qvlr0d6nsfyp"]
+[gd_scene load_steps=38 format=3 uid="uid://qvlr0d6nsfyp"]
 
 [ext_resource type="PackedScene" uid="uid://c5asaw7nos45y" path="res://Scene/Animation/Base_tree.tscn" id="1_b3xr1"]
 [ext_resource type="Texture2D" uid="uid://tfxo75w77lid" path="res://Asset/Objects/Tree animations/tree_appel_sprites.png" id="2_bo2by"]
@@ -300,20 +300,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="Animation" id="Animation_g1wuj"]
-resource_name = "Apple_Shake"
-length = 3.0
-step = 0.2
-
-[sub_resource type="Animation" id="Animation_coyea"]
-length = 0.001
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_yglvl"]
-_data = {
-"Apple_Shake": SubResource("Animation_g1wuj"),
-"RESET": SubResource("Animation_coyea")
-}
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_r4kqx"]
 radius = 12.0
 
@@ -332,15 +318,10 @@ animation = &"Grow"
 [node name="CollisionShape2D" parent="StaticBody2D" index="0"]
 position = Vector2(0, 12)
 
-[node name="AnimationPlayer" parent="." index="3"]
-libraries = {
-"": SubResource("AnimationLibrary_yglvl")
-}
-
-[node name="Grow_Time" parent="." index="4"]
+[node name="Grow_Time" parent="." index="3"]
 one_shot = true
 
-[node name="InteractionArea" parent="." index="5" instance=ExtResource("5_in68e")]
+[node name="InteractionArea" parent="." index="4" instance=ExtResource("5_in68e")]
 position = Vector2(0, 12)
 action_name = "GET Apples"
 

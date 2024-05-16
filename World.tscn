@@ -213,10 +213,11 @@ animations = [{
 [node name="World" type="Node2D"]
 script = ExtResource("1_o5744")
 gradient = ExtResource("2_41trm")
-INGAME_SPEED = 10.0
+INITIAL_HOUR = 24
 
 [node name="Daylight" type="CanvasModulate" parent="."]
 unique_name_in_owner = true
+visible = false
 color = Color(0.133333, 0.14902, 0.258824, 1)
 
 [node name="GroundTiles" type="TileMap" parent="." node_paths=PackedStringArray("player", "grid_helper")]
@@ -286,6 +287,7 @@ script = ExtResource("1_ouppl")
 
 [node name="Water" type="CanvasModulate" parent="ParallaxBackground"]
 unique_name_in_owner = true
+visible = false
 color = Color(0.133333, 0.14902, 0.258824, 1)
 
 [node name="WaterBackground" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -325,6 +327,7 @@ sprite_frames = SubResource("SpriteFrames_vt552")
 animation = &"new_animation_4"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="DayTimeLabel" parent="CanvasLayer" instance=ExtResource("58_2vt77")]
 

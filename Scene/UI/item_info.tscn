@@ -1,0 +1,120 @@
+[gd_scene load_steps=21 format=3 uid="uid://b4mrex4ams415"]
+
+[ext_resource type="Texture2D" uid="uid://dxvbxc3t4be7x" path="res://Asset/UI/ItemSlot/1.tres" id="1_i4cdy"]
+[ext_resource type="Texture2D" uid="uid://v5b6fgkrtfp3" path="res://Asset/UI/ItemSlot/7.tres" id="2_6tjka"]
+[ext_resource type="Texture2D" uid="uid://cfar00mknw67e" path="res://Asset/Objects/Items/Seed bags/Beetroot.tres" id="2_pidso"]
+[ext_resource type="FontFile" uid="uid://bxv1q2i8gv11u" path="res://Asset/UI/Font/Kenney Mini Square.ttf" id="3_ovmo1"]
+[ext_resource type="Texture2D" uid="uid://bhcg74r06choq" path="res://Asset/UI/ItemSlot/8.tres" id="3_y283f"]
+[ext_resource type="Texture2D" uid="uid://b0g5d7ywglub" path="res://Asset/UI/ItemSlot/9.tres" id="4_0375s"]
+[ext_resource type="Texture2D" uid="uid://bpwkfsr6yjlmu" path="res://Asset/UI/ItemSlot/2.tres" id="5_ji88s"]
+[ext_resource type="Texture2D" uid="uid://merx0cbseqhq" path="res://Asset/UI/ItemSlot/3.tres" id="6_covv3"]
+[ext_resource type="Texture2D" uid="uid://dcx3fasti0aud" path="res://Asset/UI/ItemSlot/4.tres" id="7_s3xtv"]
+[ext_resource type="Texture2D" uid="uid://dekuv0wja4ayw" path="res://Asset/UI/ItemSlot/5.tres" id="8_k18qu"]
+[ext_resource type="Texture2D" uid="uid://difflrp044lv6" path="res://Asset/UI/ItemSlot/6.tres" id="9_q54a4"]
+[ext_resource type="Texture2D" uid="uid://c023147bxxbhk" path="res://Asset/UI/ItemSlot/10.tres" id="10_vw533"]
+[ext_resource type="Texture2D" uid="uid://cfnnd5tankdss" path="res://Asset/UI/ItemSlot/11.tres" id="11_1ywp5"]
+[ext_resource type="Texture2D" uid="uid://bxs4cks4ir7f0" path="res://Asset/UI/ItemSlot/12.tres" id="12_2dldn"]
+[ext_resource type="Texture2D" uid="uid://bryjbpda0tmww" path="res://Asset/UI/ItemSlot/13.tres" id="13_tcwjo"]
+[ext_resource type="Texture2D" uid="uid://cu3tpcif8jcmm" path="res://Asset/UI/ItemSlot/14.tres" id="14_h4nmk"]
+[ext_resource type="Texture2D" uid="uid://ldjysx31i523" path="res://Asset/UI/ItemSlot/15.tres" id="15_djq3j"]
+[ext_resource type="Texture2D" uid="uid://bdmghx4mhqodq" path="res://Asset/UI/ItemSlot/16.tres" id="16_vayuy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_64rm3"]
+font = ExtResource("3_ovmo1")
+font_size = 8
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_272a8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6tjka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_y283f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0375s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_i4cdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ji88s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_covv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_s3xtv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_k18qu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_q54a4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_vw533")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1ywp5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_2dldn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_tcwjo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_h4nmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_djq3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_vayuy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="ItemInfo" type="TextureRect"]
+offset_right = 32.0
+offset_bottom = 34.0
+scale = Vector2(5, 5)
+texture = ExtResource("1_i4cdy")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="SeedBag" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_pidso")
+
+[node name="Label" type="Label" parent="MarginContainer/SeedBag"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.2
+offset_top = -9.4
+offset_right = -0.200001
+offset_bottom = 0.599998
+grow_horizontal = 0
+grow_vertical = 0
+text = "5
+"
+label_settings = SubResource("LabelSettings_64rm3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+sprite_frames = SubResource("SpriteFrames_272a8")

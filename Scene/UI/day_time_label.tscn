@@ -6,6 +6,10 @@
 [node name="DayTimeLabel" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 10.0
 script = ExtResource("1_ehk5v")
 
 [node name="Image" type="Control" parent="."]
