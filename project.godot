@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 InteractManager="*res://Scene/InteractionArea/InteractManager.tscn"
+Global_AutoLoad="*res://global.gd"
 
 [display]
 

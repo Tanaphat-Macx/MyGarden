@@ -1,6 +1,5 @@
-[gd_scene load_steps=8 format=3 uid="uid://ptuq35v0iulu"]
+[gd_scene load_steps=7 format=3 uid="uid://ptuq35v0iulu"]
 
-[ext_resource type="Script" path="res://Scripts/UI/item_info2.gd" id="2_m6w7r"]
 [ext_resource type="Texture2D" uid="uid://cfar00mknw67e" path="res://Asset/Objects/Items/Seed bags/Beetroot.tres" id="2_otpub"]
 [ext_resource type="FontFile" uid="uid://bxv1q2i8gv11u" path="res://Asset/UI/Font/Kenney Mini Square.ttf" id="3_h4lba"]
 
@@ -10,6 +9,21 @@ font_size = 8
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 shadow_color = Color(0, 0, 0, 0.819608)
+
+[sub_resource type="Animation" id="Animation_w4jsq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_n1wrg"]
 resource_name = "flash"
@@ -28,21 +42,6 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(0.87451, 0.145098, 0, 1), Color(1, 1, 1, 1), Color(0.87451, 0.145098, 0, 1), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_w4jsq"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Label:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ot18w"]
 _data = {
 "RESET": SubResource("Animation_w4jsq"),
@@ -54,7 +53,6 @@ offset_right = 32.0
 offset_bottom = 34.0
 scale = Vector2(5, 5)
 texture = ExtResource("2_otpub")
-script = ExtResource("2_m6w7r")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
