@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="VegetableData" load_steps=4 format=3 uid="uid://ca1h0xvnmdwd0"]
+
+[ext_resource type="Script" path="res://Resource/vegetable_data.gd" id="1_u7hxc"]
+[ext_resource type="Texture2D" uid="uid://cfar00mknw67e" path="res://Asset/Objects/Items/Seed bags/Beetroot.tres" id="2_a6wad"]
+[ext_resource type="Resource" uid="uid://bitou6veyeria" path="res://Resource/Vegetables_name/Beetroot.tres" id="3_7osig"]
+
+[resource]
+script = ExtResource("1_u7hxc")
+vegetableNameResource = ExtResource("3_7osig")
+texture = ExtResource("2_a6wad")
+quantity = 2

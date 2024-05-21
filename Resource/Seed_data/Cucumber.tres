@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SeedData" load_steps=4 format=3 uid="uid://di7cn56eo4hxf"]
+
+[ext_resource type="Resource" uid="uid://ygp4lxxne1xp" path="res://Resource/SeedBag_list (vegetableDataResource)/Cucumber.tres" id="1_oep1m"]
+[ext_resource type="PackedScene" uid="uid://bjdag7a6jfsky" path="res://Scene/Vegetable/Cucumber.tscn" id="2_io15c"]
+[ext_resource type="Script" path="res://Resource/seed_data.gd" id="3_ayhe1"]
+
+[resource]
+script = ExtResource("3_ayhe1")
+vegetableDataResource = ExtResource("1_oep1m")
+vegetableScene = ExtResource("2_io15c")

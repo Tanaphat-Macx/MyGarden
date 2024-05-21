@@ -1,0 +1,8 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cfar00mknw67e"]
+
+[ext_resource type="Texture2D" uid="uid://bwsqmdrao81m4" path="res://Asset/Objects/Items/Seed bags/Farming Plants items.png" id="1_40rs0"]
+
+[resource]
+atlas = ExtResource("1_40rs0")
+region = Rect2(1, 192, 14, 15)
+margin = Rect2(-0.3, 2.08165e-12, 2.08165e-12, 2.08165e-12)

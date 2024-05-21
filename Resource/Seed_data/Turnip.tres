@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SeedData" load_steps=4 format=3 uid="uid://c1t02g5he0tkd"]
+
+[ext_resource type="Script" path="res://Resource/seed_data.gd" id="1_edj7e"]
+[ext_resource type="Resource" uid="uid://mei6jlxlsbc0" path="res://Resource/SeedBag_list (vegetableDataResource)/Turnip.tres" id="2_lug5q"]
+[ext_resource type="PackedScene" uid="uid://bcky0g3o0yro1" path="res://Scene/Vegetable/Turnip.tscn" id="3_u6vuu"]
+
+[resource]
+script = ExtResource("1_edj7e")
+vegetableDataResource = ExtResource("2_lug5q")
+vegetableScene = ExtResource("3_u6vuu")

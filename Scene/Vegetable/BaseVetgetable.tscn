@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj3ukkdvaf758"]
+
+[ext_resource type="Script" path="res://Scripts/Flower_and_Vetgatable/BaseVetgetable.gd" id="1_oif7b"]
+
+[node name="BaseVetgetable" type="Node2D"]
+script = ExtResource("1_oif7b")
+
+[node name="Vetagetable_Sprite2D" type="Sprite2D" parent="."]
+region_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Grow_Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Grow_Timer" to="." method="_on_grow_timer_timeout"]

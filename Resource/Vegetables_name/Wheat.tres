@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="VegetableName" load_steps=2 format=3 uid="uid://d26ucm2bbdfdm"]
+
+[ext_resource type="Script" path="res://Resource/vegetable_name.gd" id="1_3ffqb"]
+
+[resource]
+script = ExtResource("1_3ffqb")
+vegetableName = "Wheat"
