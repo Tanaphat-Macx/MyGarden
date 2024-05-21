@@ -6,6 +6,7 @@
 [node name="SlotContainer" type="PanelContainer"]
 offset_right = 32.0
 offset_bottom = 34.0
+scale = Vector2(5, 5)
 script = ExtResource("1_tmqsl")
 
 [node name="ItemInfo" parent="." instance=ExtResource("1_srv61")]

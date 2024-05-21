@@ -4,4 +4,4 @@
 
 [resource]
 atlas = ExtResource("1_waxiv")
-region = Rect2(0, 80, 16, 16)
+region = Rect2(1, 80, 14, 15)

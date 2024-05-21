@@ -9,7 +9,7 @@ func get_seed_data(value) -> SeedData:
 			return child
 	return null
 	
-func get_sie() -> int:
+func get_size() -> int:
 	return seedList.size()
 	
 func get_seed_list() -> Array[SeedData]:

@@ -9,6 +9,9 @@ var seedDataResource: SeedData
 func setup(value):
 	seedDataResource = value
 	seedDataResource.quanity_changed.connect(_on_quantity_changed)
+	
+	# Pull SeedData to use 
+	item_info.set_item_info(seedDataResource.get_texture(), seedDataResource.get_quantity())
 
 func _on_texture_button_button_down() -> void:
 	if  seedDataResource.seed_left(): 
