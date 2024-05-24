@@ -7,7 +7,7 @@ extends PanelContainer
 @onready var grid: GridContainer = $MarginContainer/Grid
 @onready var select_texture: TextureRect = $MarginContainer/selectTexture
 
-func _ready() -> void:
+func _ready(): 
 	grid.columns = seedResource.get_size()
 	add_new_slot(seedResource.get_seed_list())
 	
@@ -15,7 +15,10 @@ func add_new_slot(seedArray: Array[SeedData]) -> void:
 	for child in seedArray:
 		instant_slot(child)
 		
+	var firstSlot = grid.get_child(0)
 
+	Global_AutoLoad.emit_signal("seed_changed", firstSlot.seedDataResource)
+	changed_selected_slot(firstSlot.position)
 	
 func _on_slot_selected(value) -> void:
 	changed_selected_slot(value)

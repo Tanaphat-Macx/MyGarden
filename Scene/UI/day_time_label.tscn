@@ -1,7 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqkv0h7ro8a2o"]
+[gd_scene load_steps=6 format=3 uid="uid://dqkv0h7ro8a2o"]
 
 [ext_resource type="Script" path="res://Scripts/UI/day_time_label.gd" id="1_ehk5v"]
 [ext_resource type="Texture2D" uid="uid://cw0w2uv4l7m7f" path="res://Asset/UI/Sprite sheet for Basic Pack.png" id="1_j8a5g"]
+[ext_resource type="FontFile" uid="uid://bxv1q2i8gv11u" path="res://Asset/UI/Font/Kenney Mini Square.ttf" id="3_8cry2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qp71b"]
+font = ExtResource("3_8cry2")
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_8c01e"]
+font = ExtResource("3_8cry2")
+font_size = 20
 
 [node name="DayTimeLabel" type="Control"]
 layout_mode = 3
@@ -37,6 +46,7 @@ alignment = 1
 unique_name_in_owner = true
 layout_mode = 2
 text = "  Day   1"
+label_settings = SubResource("LabelSettings_qp71b")
 horizontal_alignment = 1
 metadata/_edit_lock_ = true
 
@@ -44,5 +54,6 @@ metadata/_edit_lock_ = true
 unique_name_in_owner = true
 layout_mode = 2
 text = "12:00  am"
+label_settings = SubResource("LabelSettings_8c01e")
 horizontal_alignment = 1
 metadata/_edit_lock_ = true

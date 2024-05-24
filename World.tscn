@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://bicmrha1xd50i"]
+[gd_scene load_steps=18 format=3 uid="uid://bicmrha1xd50i"]
 
 [ext_resource type="TileSet" uid="uid://garr6jg8btnu" path="res://Asset/Tilesets/TilesSave/Ground.tres" id="1_4kbis"]
 [ext_resource type="Texture2D" uid="uid://cftc2how71bcj" path="res://Asset/Tilesets/ground tiles/water frames/Water.png" id="1_gymo0"]
@@ -8,212 +8,19 @@
 [ext_resource type="PackedScene" uid="uid://bq30tt7uunqa2" path="res://Scene/player.tscn" id="2_cl1jv"]
 [ext_resource type="Texture2D" uid="uid://7uexixlq4wvv" path="res://Asset/Objects/grid_selector copy.png" id="2_jk1ba"]
 [ext_resource type="Script" path="res://Scripts/Components/Grid_Helper.gd" id="2_pdn6r"]
-[ext_resource type="PackedScene" uid="uid://d1u5quxjkrsh0" path="res://Scene/Vegetable/Carrot.tscn" id="3_7lx8x"]
 [ext_resource type="Texture2D" uid="uid://f7wye47l1pl2" path="res://Asset/Tilesets/ground tiles/Bitmask references 2.png" id="4_mo2hl"]
 [ext_resource type="PackedScene" uid="uid://v5h014milmod" path="res://Scene/InteractionArea/Object/bed.tscn" id="6_8gdpb"]
 [ext_resource type="Texture2D" uid="uid://cpy2ucr5dqqgp" path="res://Asset/Tilesets/ground tiles/New tiles/TILE LAYER EXAMPLE.png" id="8_1img6"]
 [ext_resource type="Texture2D" uid="uid://bknxb0x1a6s3k" path="res://Asset/Tilesets/ground tiles/New tiles/TILES PREVIEW v.2.png" id="9_wlwwb"]
 [ext_resource type="Texture2D" uid="uid://c00dcaemgqb6v" path="res://Asset/Tilesets/ground tiles/New tiles/TILES PREVIEW.png" id="10_e4oq3"]
-[ext_resource type="Texture2D" uid="uid://c053nkvbg7krt" path="res://Asset/Objects/Items/Seed bags/Empty_bag.tres" id="12_i1bko"]
-[ext_resource type="Texture2D" uid="uid://dcbkk756nf5hk" path="res://Asset/Objects/Items/Seed bags/Corn.tres" id="13_5yp06"]
-[ext_resource type="Texture2D" uid="uid://b0537lls2n3w5" path="res://Asset/Objects/Items/Seed bags/Cucumber.tres" id="13_b7yey"]
-[ext_resource type="Texture2D" uid="uid://dyps3x3q4nv5p" path="res://Asset/Objects/Items/Seed bags/Carrot.tres" id="14_4vig6"]
-[ext_resource type="Texture2D" uid="uid://df82jktdvxed6" path="res://Asset/Objects/Items/Seed bags/Cauliflower.tres" id="15_a6t21"]
-[ext_resource type="Texture2D" uid="uid://bfot7xl7kh0ro" path="res://Asset/Objects/Items/Seed bags/Tomato.tres" id="16_e2kku"]
-[ext_resource type="Texture2D" uid="uid://c7kl2ufyweb2u" path="res://Asset/Objects/Items/Seed bags/Eggplant.tres" id="17_ii75y"]
-[ext_resource type="Texture2D" uid="uid://ca1b8qsukql6m" path="res://Asset/Objects/Items/Seed bags/Tulip.tres" id="18_24lju"]
-[ext_resource type="Texture2D" uid="uid://dq4xwcwltgaek" path="res://Asset/Objects/Items/Seed bags/IcebergSalat.tres" id="19_i0u6l"]
-[ext_resource type="Texture2D" uid="uid://dbova6bdurv3f" path="res://Asset/Objects/Items/Seed bags/Wheat.tres" id="20_1cegq"]
-[ext_resource type="Texture2D" uid="uid://dhdasq0eirg4v" path="res://Asset/Objects/Items/Seed bags/Pumpkin.tres" id="21_pj4pp"]
-[ext_resource type="Texture2D" uid="uid://c7sb601xm6shf" path="res://Asset/Objects/Items/Seed bags/Turnip.tres" id="22_wrc23"]
-[ext_resource type="Texture2D" uid="uid://irnp0xh5at40" path="res://Asset/Objects/Items/Seed bags/Rose.tres" id="23_pfaci"]
-[ext_resource type="Texture2D" uid="uid://cfar00mknw67e" path="res://Asset/Objects/Items/Seed bags/Beetroot.tres" id="24_gb6kq"]
-[ext_resource type="Texture2D" uid="uid://bxdpvmsuiap7j" path="res://Asset/Objects/Items/Seed bags/Starfruit.tres" id="25_6mdkf"]
-[ext_resource type="Texture2D" uid="uid://do8ym0rd4ttnq" path="res://Asset/Objects/Items/Eggs/Normal_egg.tres" id="27_6woa8"]
-[ext_resource type="Texture2D" uid="uid://d1yc133g8qrqq" path="res://Asset/Objects/Items/Eggs/Gray_egg.tres" id="28_s7irb"]
-[ext_resource type="Texture2D" uid="uid://be3rfv0x5f5gt" path="res://Asset/Objects/Items/Eggs/Pink_egg.tres" id="29_u0m2j"]
-[ext_resource type="Texture2D" uid="uid://dyggapvvegdyy" path="res://Asset/Objects/Items/Eggs/Green_egg.tres" id="30_oih3x"]
-[ext_resource type="Texture2D" uid="uid://b25i6vbh36kq2" path="res://Asset/Objects/Items/Eggs/Blue_egg.tres" id="31_5k87b"]
-[ext_resource type="Texture2D" uid="uid://c30pnw1wukv2g" path="res://Asset/Objects/Items/Fruits/Apple.tres" id="32_w4awm"]
-[ext_resource type="Texture2D" uid="uid://dcr0r7fb3ahxl" path="res://Asset/Objects/Items/Fruits/Strawberry.tres" id="33_88xsv"]
-[ext_resource type="Texture2D" uid="uid://d245dqg8g88q3" path="res://Asset/Objects/Items/Fruits/Orange.tres" id="34_kkvte"]
-[ext_resource type="Texture2D" uid="uid://c4xri3xwel4do" path="res://Asset/Objects/Items/Fruits/Grape.tres" id="35_v0n3o"]
-[ext_resource type="Texture2D" uid="uid://ixjo8pd1rowr" path="res://Asset/Objects/Items/Fruits/Pair.tres" id="36_pb4xe"]
-[ext_resource type="Texture2D" uid="uid://kwe5mhtty0sm" path="res://Asset/Objects/Items/Fruits/Blueberry.tres" id="37_7v6tu"]
-[ext_resource type="Texture2D" uid="uid://df7sdsguvamn1" path="res://Asset/Objects/Items/Fruits/Peach.tres" id="38_bgug1"]
-[ext_resource type="Texture2D" uid="uid://dd32fov4la08d" path="res://Asset/Objects/Items/Vegetable/Corn.tres" id="39_cowqu"]
-[ext_resource type="Texture2D" uid="uid://brw2j5v2egndr" path="res://Asset/Objects/Items/Vegetable/Carrot.tres" id="40_kcs2d"]
-[ext_resource type="Texture2D" uid="uid://djk6qrg1v2ssp" path="res://Asset/Objects/Items/Vegetable/Cauliflower.tres" id="41_b4vyd"]
-[ext_resource type="Texture2D" uid="uid://dhgoqpohpat8j" path="res://Asset/Objects/Items/Vegetable/Tomato.tres" id="42_si8iw"]
-[ext_resource type="Texture2D" uid="uid://cgwu5gufr4nth" path="res://Asset/Objects/Items/Vegetable/Eggplant.tres" id="43_1c2ax"]
-[ext_resource type="Texture2D" uid="uid://bq020x3siuc58" path="res://Asset/Objects/Items/Vegetable/Tulip.tres" id="44_ciqtn"]
-[ext_resource type="Texture2D" uid="uid://bf0tpqcfa7emq" path="res://Asset/Objects/Items/Vegetable/IcebergSalat.tres" id="45_qtphb"]
-[ext_resource type="Texture2D" uid="uid://dsqvy5n7r4rfr" path="res://Asset/Objects/Items/Vegetable/Wheat.tres" id="46_gjnla"]
-[ext_resource type="Texture2D" uid="uid://bhucnq7qxf1kb" path="res://Asset/Objects/Items/Vegetable/Pumpkin.tres" id="47_jlc2d"]
-[ext_resource type="Texture2D" uid="uid://b7h7j2hroaqk5" path="res://Asset/Objects/Items/Vegetable/Turnip.tres" id="48_a4232"]
-[ext_resource type="Texture2D" uid="uid://devn2a8p6dci" path="res://Asset/Objects/Items/Vegetable/Rose.tres" id="49_126vc"]
-[ext_resource type="Texture2D" uid="uid://ckdntw54dw3h5" path="res://Asset/Objects/Items/Vegetable/Beetroot.tres" id="50_byls0"]
-[ext_resource type="Texture2D" uid="uid://s1mhrnqf31wq" path="res://Asset/Objects/Items/Vegetable/Starfruit.tres" id="51_h5ird"]
-[ext_resource type="Texture2D" uid="uid://b7vysqdl4kh1m" path="res://Asset/Objects/Items/Vegetable/Cucumber.tres" id="52_pt7hu"]
+[ext_resource type="PackedScene" uid="uid://dqkv0h7ro8a2o" path="res://Scene/UI/day_time_label.tscn" id="16_4017q"]
+[ext_resource type="PackedScene" uid="uid://41fslbek2g2q" path="res://Scene/UI/inventory.tscn" id="17_wtomw"]
 [ext_resource type="PackedScene" uid="uid://dcx7c0mja5ne0" path="res://Scene/Animation/door_house.tscn" id="53_7cwal"]
 [ext_resource type="PackedScene" uid="uid://qvlr0d6nsfyp" path="res://Scene/Animation/apple_tree.tscn" id="54_y62pj"]
-[ext_resource type="PackedScene" uid="uid://dqkv0h7ro8a2o" path="res://Scene/UI/day_time_label.tscn" id="58_2vt77"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_vt552"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("12_i1bko")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_5yp06")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_4vig6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_a6t21")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_e2kku")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_ii75y")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_24lju")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_i0u6l")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_1cegq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_pj4pp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_wrc23")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_pfaci")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_gb6kq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_6mdkf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_b7yey")
-}],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("27_6woa8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_s7irb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_u0m2j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_oih3x")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_5k87b")
-}],
-"loop": true,
-"name": &"new_animation_1",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("32_w4awm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_88xsv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("34_kkvte")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_v0n3o")
-}, {
-"duration": 1.0,
-"texture": ExtResource("36_pb4xe")
-}, {
-"duration": 1.0,
-"texture": ExtResource("37_7v6tu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("38_bgug1")
-}],
-"loop": true,
-"name": &"new_animation_2",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("39_cowqu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("40_kcs2d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("41_b4vyd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("42_si8iw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("43_1c2ax")
-}, {
-"duration": 1.0,
-"texture": ExtResource("44_ciqtn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("45_qtphb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("46_gjnla")
-}, {
-"duration": 1.0,
-"texture": ExtResource("47_jlc2d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("48_a4232")
-}, {
-"duration": 1.0,
-"texture": ExtResource("49_126vc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("50_byls0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("51_h5ird")
-}, {
-"duration": 1.0,
-"texture": ExtResource("52_pt7hu")
-}],
-"loop": true,
-"name": &"new_animation_3",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"new_animation_4",
-"speed": 5.0
-}]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_o5744")
 gradient = ExtResource("2_41trm")
-INITIAL_HOUR = 24
 
 [node name="Daylight" type="CanvasModulate" parent="."]
 unique_name_in_owner = true
@@ -243,7 +50,6 @@ layer_7/tile_data = PackedInt32Array(262150, 196612, 0, 327686, 196612, 1, 39322
 script = ExtResource("2_pdn6r")
 player = NodePath("Game/Player")
 grid_helper = NodePath("Game/GridHelper")
-currentSeed = ExtResource("3_7lx8x")
 
 [node name="Game" type="Node2D" parent="GroundTiles"]
 y_sort_enabled = true
@@ -321,15 +127,21 @@ texture = ExtResource("9_wlwwb")
 position = Vector2(704, 856)
 texture = ExtResource("10_e4oq3")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-visible = false
-sprite_frames = SubResource("SpriteFrames_vt552")
-animation = &"new_animation_4"
+[node name="HUD" type="CanvasLayer" parent="."]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
+[node name="DayTimeLabel" parent="HUD" instance=ExtResource("16_4017q")]
 
-[node name="DayTimeLabel" parent="CanvasLayer" instance=ExtResource("58_2vt77")]
+[node name="Inventory" parent="HUD" instance=ExtResource("17_wtomw")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -140.0
+offset_top = -90.0
+offset_right = -98.0
+offset_bottom = -47.0
+grow_horizontal = 2
+grow_vertical = 0
 
-[connection signal="time_tick" from="." to="CanvasLayer/DayTimeLabel" method="_on_world_time_tick"]
 [connection signal="plantSeed" from="GroundTiles/Game/Player" to="GroundTiles" method="_on_player_plant_seed"]

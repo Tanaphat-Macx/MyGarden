@@ -14,7 +14,7 @@ func setup(value):
 	item_info.set_item_info(seedDataResource.get_texture(), seedDataResource.get_quantity())
 
 func _on_texture_button_button_down() -> void:
-	if  seedDataResource.seed_left(): 
+	if seedDataResource != null and seedDataResource.seed_left(): 
 		Global_AutoLoad.emit_signal("seed_changed", seedDataResource)
 		emit_signal("slot_selected", position)
 		

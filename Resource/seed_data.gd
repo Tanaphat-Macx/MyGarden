@@ -16,6 +16,7 @@ func add_quantity(value: int) -> void:
 func substract_quantity() -> void:
 	if seed_left():
 		vegetableDataResource.quantity -= 1
+		
 	quanity_changed.emit(vegetableDataResource.quantity)
 	
 func get_texture() -> Texture: #Return Image
