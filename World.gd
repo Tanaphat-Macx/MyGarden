@@ -4,6 +4,8 @@ const MINUTES_PER_DAY = 1440
 const MINITES_PER_HOUR = 60
 const INGAME_TO_REAL_MINUTE_DURATION = (2 * PI) / MINUTES_PER_DAY
 
+
+
 @onready var daylight: CanvasModulate = %Daylight
 @onready var waterlight: CanvasModulate = %Water
 
@@ -29,6 +31,7 @@ func _ready() -> void:
 
 	time = INGAME_TO_REAL_MINUTE_DURATION * INITIAL_HOUR * MINITES_PER_HOUR
 	time_tick.connect(day_time_label.set_daytime)
+	
 
 func _process(delta: float) -> void:
 	#DayTime
@@ -54,6 +57,6 @@ func _reacalculate_time() -> void:
 		past_minute = minute
 		time_tick.emit(day, hour, minute)
 	
-
-
-	
+func _on_bed() -> void:
+	INITIAL_HOUR += 8
+	#print("Signal connect " , INITIAL_HOUR)

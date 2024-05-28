@@ -21,6 +21,7 @@
 [node name="World" type="Node2D"]
 script = ExtResource("1_o5744")
 gradient = ExtResource("2_41trm")
+INITIAL_HOUR = 8
 
 [node name="Daylight" type="CanvasModulate" parent="."]
 unique_name_in_owner = true
@@ -144,4 +145,5 @@ offset_bottom = -47.0
 grow_horizontal = 2
 grow_vertical = 0
 
+[connection signal="on_bed" from="GroundTiles/Game/Interact_Area/Bed" to="." method="_on_bed"]
 [connection signal="plantSeed" from="GroundTiles/Game/Player" to="GroundTiles" method="_on_player_plant_seed"]

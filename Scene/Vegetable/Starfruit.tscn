@@ -202,7 +202,6 @@ _data = {
 }
 
 [node name="Starfruit" instance=ExtResource("1_3qwnw")]
-harvest_ready = true
 
 [node name="Vetagetable_Sprite2D" parent="." index="0"]
 position = Vector2(1, -6)

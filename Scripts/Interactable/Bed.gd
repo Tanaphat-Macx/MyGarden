@@ -4,6 +4,8 @@ extends Node2D
 @onready var canvas_layer: CanvasLayer = $AnimationPlayer/CanvasLayer
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
+signal on_bed
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	interaction_area.interact = Callable(self, "_on_sleep")
@@ -14,4 +16,5 @@ func _on_sleep():
 	animation_player.play("bed")
 	await  animation_player.animation_finished
 	animation_player.play_backwards("bed")
+	emit_signal("on_bed")
 	

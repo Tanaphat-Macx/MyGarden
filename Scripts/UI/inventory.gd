@@ -31,3 +31,9 @@ func instant_slot(seedData: SeedData) -> void:
 	grid.add_child(slot)
 	slot.connect("slot_selected", _on_slot_selected)
 	slot.setup(seedData)
+
+func slot_empty(seedData: SeedData) -> void:
+	for child in grid.get_children():
+		if child.seedDataResource == seedData:
+			child.play_flash_slot_empty()
+	

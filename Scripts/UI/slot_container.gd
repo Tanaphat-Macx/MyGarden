@@ -23,3 +23,8 @@ func update_quantity() -> void:
 
 func _on_quantity_changed(new_quantity) -> void:
 	item_info.set_label(new_quantity)
+
+func play_flash_slot_empty() -> void:
+	$ItemInfo.play_flash_animation()
+	
+	

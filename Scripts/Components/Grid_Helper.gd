@@ -5,6 +5,7 @@ extends TileMap
 @export var player: CharacterBody2D
 @export var grid_helper: Sprite2D
 @export var currentSeed: SeedData
+@onready var inventory: PanelContainer = $"../HUD/Inventory"
 
 var plantedVetgetables: Dictionary = {}
 #var plantedFlowers: Dictionary = {}
@@ -26,9 +27,12 @@ func _on_player_plant_seed() -> void:
 	if tile == null or currentSeed == null:
 		return
 	if tile.get_custom_data("Garden"):
-		if not plantedVetgetables.has(cellLocalCoord):
-			currentSeed.substract_quantity()
-			plant_seed(cellLocalCoord)
+		if not plantedVetgetables.has(cellLocalCoord): 
+			if currentSeed.seed_left():
+				currentSeed.substract_quantity()
+				plant_seed(cellLocalCoord)
+			else:
+				inventory.slot_empty(currentSeed)
 		elif is_havestable(cellLocalCoord):
 			harvest_plant(cellLocalCoord)
 	else:
