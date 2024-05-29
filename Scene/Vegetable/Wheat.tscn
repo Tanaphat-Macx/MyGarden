@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://srtxjc0gfyxr"]
+[gd_scene load_steps=10 format=3 uid="uid://srtxjc0gfyxr"]
 
 [ext_resource type="PackedScene" uid="uid://dj3ukkdvaf758" path="res://Scene/Vegetable/BaseVetgetable.tscn" id="1_mcgyj"]
 [ext_resource type="Texture2D" uid="uid://2pebkg0hi36j" path="res://Asset/Objects/Farming Plants.png" id="2_4g4b4"]
+[ext_resource type="Resource" uid="uid://b812vxto4pmtr" path="res://Resource/Vegetable_list (ForVegtableShop)/Wheat.tres" id="2_oku5v"]
 
 [sub_resource type="Animation" id="Animation_lab35"]
 resource_name = "0"
@@ -202,6 +203,7 @@ _data = {
 }
 
 [node name="Wheat" instance=ExtResource("1_mcgyj")]
+vetgatableItem = ExtResource("2_oku5v")
 
 [node name="Vetagetable_Sprite2D" parent="." index="0"]
 position = Vector2(0, -7)

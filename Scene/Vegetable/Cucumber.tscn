@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://bjdag7a6jfsky"]
+[gd_scene load_steps=10 format=3 uid="uid://bjdag7a6jfsky"]
 
 [ext_resource type="PackedScene" uid="uid://dj3ukkdvaf758" path="res://Scene/Vegetable/BaseVetgetable.tscn" id="1_qybml"]
+[ext_resource type="Resource" uid="uid://lghvt76admki" path="res://Resource/Vegetable_list (ForVegtableShop)/Cucumber.tres" id="2_407dg"]
 [ext_resource type="Texture2D" uid="uid://2pebkg0hi36j" path="res://Asset/Objects/Farming Plants.png" id="2_klvs2"]
 
 [sub_resource type="Animation" id="Animation_obswo"]
@@ -202,6 +203,7 @@ _data = {
 }
 
 [node name="Cucumber" instance=ExtResource("1_qybml")]
+vetgatableItem = ExtResource("2_407dg")
 
 [node name="Vetagetable_Sprite2D" parent="." index="0"]
 position = Vector2(-1, -7)

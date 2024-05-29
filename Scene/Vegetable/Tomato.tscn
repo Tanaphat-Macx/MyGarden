@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://cyg3mvl4c3u2s"]
+[gd_scene load_steps=10 format=3 uid="uid://cyg3mvl4c3u2s"]
 
 [ext_resource type="PackedScene" uid="uid://dj3ukkdvaf758" path="res://Scene/Vegetable/BaseVetgetable.tscn" id="1_ha2ie"]
+[ext_resource type="Resource" uid="uid://dowib6hc2u7fa" path="res://Resource/Vegetable_list (ForVegtableShop)/Tomato.tres" id="2_7gc75"]
 [ext_resource type="Texture2D" uid="uid://2pebkg0hi36j" path="res://Asset/Objects/Farming Plants.png" id="2_qfeca"]
 
 [sub_resource type="Animation" id="Animation_rf26k"]
@@ -202,6 +203,7 @@ _data = {
 }
 
 [node name="Tomato" instance=ExtResource("1_ha2ie")]
+vetgatableItem = ExtResource("2_7gc75")
 
 [node name="Vetagetable_Sprite2D" parent="." index="0"]
 position = Vector2(-1, -7)

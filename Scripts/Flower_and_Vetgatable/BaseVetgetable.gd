@@ -2,6 +2,7 @@ class_name Vetgetable
 extends Node2D
 
 @export var amount: int = 2
+@export var vetgatableItem: VegetableData
 @export var harvest_ready: bool = false
 
 var index = 0
@@ -18,4 +19,5 @@ func _on_grow_timer_timeout() -> void:
 	animation_player.play(str(index)) 
 	
 func harvest() -> void:
+	vetgatableItem.quantity += amount
 	queue_free()

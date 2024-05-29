@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2i65nyecb5n0"]
+
+[ext_resource type="PackedScene" uid="uid://cj75xabubcggt" path="res://Scene/UI/background.tscn" id="1_dwjww"]
+[ext_resource type="Script" path="res://Scripts/Shop/StationContainer.gd" id="2_30nn3"]
+[ext_resource type="PackedScene" uid="uid://brvphg5ihejjx" path="res://Scene/Shop/seed_extractor.tscn" id="2_k8s5o"]
+[ext_resource type="Resource" uid="uid://d2v6i0vxuf3rt" path="res://Resource/vegetable_resource.tres" id="4_6limf"]
+[ext_resource type="Resource" uid="uid://drpwllkjxheby" path="res://Resource/seed_resource.tres" id="5_1ytgc"]
+
+[node name="VetShop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" parent="." instance=ExtResource("1_dwjww")]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -240.0
+offset_top = 150.0
+offset_right = 60.0
+offset_bottom = 400.0
+grow_horizontal = 2
+scale = Vector2(1.5, 1.5)
+
+[node name="MarginContainer" type="MarginContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Background/MarginContainer"]
+layout_mode = 2
+
+[node name="StationContainer" type="VBoxContainer" parent="Background/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+script = ExtResource("2_30nn3")
+seedExtractorScene = ExtResource("2_k8s5o")
+VetgetableResource = ExtResource("4_6limf")
+seedResource = ExtResource("5_1ytgc")

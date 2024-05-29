@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dp3claxsiv4cs"]
+[gd_scene load_steps=10 format=3 uid="uid://dp3claxsiv4cs"]
 
 [ext_resource type="PackedScene" uid="uid://dj3ukkdvaf758" path="res://Scene/Vegetable/BaseVetgetable.tscn" id="1_j64nk"]
+[ext_resource type="Resource" uid="uid://d4d4wk53s5c6g" path="res://Resource/Vegetable_list (ForVegtableShop)/Cauliflower.tres" id="2_vq11r"]
 [ext_resource type="Texture2D" uid="uid://2pebkg0hi36j" path="res://Asset/Objects/Farming Plants.png" id="2_vwgpm"]
 
 [sub_resource type="Animation" id="Animation_h13ku"]
@@ -202,6 +203,7 @@ _data = {
 }
 
 [node name="Cauliflower" instance=ExtResource("1_j64nk")]
+vetgatableItem = ExtResource("2_vq11r")
 
 [node name="Vetagetable_Sprite2D" parent="." index="0"]
 position = Vector2(0, -7)

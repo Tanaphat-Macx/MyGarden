@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cllciq2w63woj"]
+
+[ext_resource type="Texture2D" uid="uid://ddwdeoci0t7n2" path="res://Asset/UI/UI Big Play Button.png" id="1_gfnrr"]
+
+[resource]
+atlas = ExtResource("1_gfnrr")
+region = Rect2(0, 0, 96, 32)

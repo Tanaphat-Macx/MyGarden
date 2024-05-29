@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://bcky0g3o0yro1"]
+[gd_scene load_steps=10 format=3 uid="uid://bcky0g3o0yro1"]
 
 [ext_resource type="PackedScene" uid="uid://dj3ukkdvaf758" path="res://Scene/Vegetable/BaseVetgetable.tscn" id="1_m2dlc"]
+[ext_resource type="Resource" uid="uid://jvixq755fojm" path="res://Resource/Vegetable_list (ForVegtableShop)/Turnip.tres" id="2_l6dlk"]
 [ext_resource type="Texture2D" uid="uid://2pebkg0hi36j" path="res://Asset/Objects/Farming Plants.png" id="2_lnviv"]
 
 [sub_resource type="Animation" id="Animation_rjt7n"]
@@ -202,6 +203,7 @@ _data = {
 }
 
 [node name="Turnip" instance=ExtResource("1_m2dlc")]
+vetgatableItem = ExtResource("2_l6dlk")
 
 [node name="Vetagetable_Sprite2D" parent="." index="0"]
 position = Vector2(0, -7)

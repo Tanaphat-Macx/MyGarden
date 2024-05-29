@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bicmrha1xd50i"]
+[gd_scene load_steps=19 format=3 uid="uid://bicmrha1xd50i"]
 
 [ext_resource type="TileSet" uid="uid://garr6jg8btnu" path="res://Asset/Tilesets/TilesSave/Ground.tres" id="1_4kbis"]
 [ext_resource type="Texture2D" uid="uid://cftc2how71bcj" path="res://Asset/Tilesets/ground tiles/water frames/Water.png" id="1_gymo0"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bknxb0x1a6s3k" path="res://Asset/Tilesets/ground tiles/New tiles/TILES PREVIEW v.2.png" id="9_wlwwb"]
 [ext_resource type="Texture2D" uid="uid://c00dcaemgqb6v" path="res://Asset/Tilesets/ground tiles/New tiles/TILES PREVIEW.png" id="10_e4oq3"]
 [ext_resource type="PackedScene" uid="uid://dqkv0h7ro8a2o" path="res://Scene/UI/day_time_label.tscn" id="16_4017q"]
+[ext_resource type="PackedScene" uid="uid://d2i65nyecb5n0" path="res://Scene/Shop/vet_shop.tscn" id="17_r6yqr"]
 [ext_resource type="PackedScene" uid="uid://41fslbek2g2q" path="res://Scene/UI/inventory.tscn" id="17_wtomw"]
 [ext_resource type="PackedScene" uid="uid://dcx7c0mja5ne0" path="res://Scene/Animation/door_house.tscn" id="53_7cwal"]
 [ext_resource type="PackedScene" uid="uid://qvlr0d6nsfyp" path="res://Scene/Animation/apple_tree.tscn" id="54_y62pj"]
@@ -131,6 +132,8 @@ texture = ExtResource("10_e4oq3")
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="DayTimeLabel" parent="HUD" instance=ExtResource("16_4017q")]
+
+[node name="VetShop" parent="HUD" instance=ExtResource("17_r6yqr")]
 
 [node name="Inventory" parent="HUD" instance=ExtResource("17_wtomw")]
 anchors_preset = 7

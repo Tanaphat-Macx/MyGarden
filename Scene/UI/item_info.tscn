@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://b4mrex4ams415"]
+[gd_scene load_steps=8 format=3 uid="uid://b4mrex4ams415"]
 
 [ext_resource type="Texture2D" uid="uid://dxvbxc3t4be7x" path="res://Asset/UI/ItemSlot/1.tres" id="1_i4cdy"]
 [ext_resource type="Script" path="res://Scripts/UI/item_info.gd" id="2_i0bi2"]
 [ext_resource type="FontFile" uid="uid://bxv1q2i8gv11u" path="res://Asset/UI/Font/Kenney Mini Square.ttf" id="3_ovmo1"]
-[ext_resource type="Texture2D" uid="uid://cfar00mknw67e" path="res://Asset/Objects/Items/Seed bags/Beetroot.tres" id="3_qavsi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_64rm3"]
 font = ExtResource("3_ovmo1")
@@ -69,7 +68,6 @@ scale = Vector2(1.5, 1.5)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("3_qavsi")
 
 [node name="Label" type="Label" parent="MarginContainer/SeedBag"]
 layout_mode = 1

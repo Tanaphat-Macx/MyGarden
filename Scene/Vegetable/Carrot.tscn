@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://d1u5quxjkrsh0"]
+[gd_scene load_steps=10 format=3 uid="uid://d1u5quxjkrsh0"]
 
 [ext_resource type="PackedScene" uid="uid://dj3ukkdvaf758" path="res://Scene/Vegetable/BaseVetgetable.tscn" id="1_rc6yn"]
+[ext_resource type="Resource" uid="uid://5u52n5v3bfhj" path="res://Resource/Vegetable_list (ForVegtableShop)/Carrot.tres" id="2_4ftnm"]
 [ext_resource type="Texture2D" uid="uid://2pebkg0hi36j" path="res://Asset/Objects/Farming Plants.png" id="2_lkyyw"]
 
 [sub_resource type="Animation" id="Animation_46vgq"]
@@ -202,6 +203,7 @@ _data = {
 }
 
 [node name="Carrot" instance=ExtResource("1_rc6yn")]
+vetgatableItem = ExtResource("2_4ftnm")
 
 [node name="Vetagetable_Sprite2D" parent="." index="0"]
 position = Vector2(0, -7)

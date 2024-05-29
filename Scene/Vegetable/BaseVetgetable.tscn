@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://dj3ukkdvaf758"]
+[gd_scene load_steps=3 format=3 uid="uid://dj3ukkdvaf758"]
 
 [ext_resource type="Script" path="res://Scripts/Flower_and_Vetgatable/BaseVetgetable.gd" id="1_oif7b"]
+[ext_resource type="Resource" uid="uid://4h1axjbp8f3h" path="res://Resource/Vegetable_list (ForVegtableShop)/Beetroot.tres" id="2_jrcp3"]
 
 [node name="BaseVetgetable" type="Node2D"]
 script = ExtResource("1_oif7b")
+vetgatableItem = ExtResource("2_jrcp3")
 
 [node name="Vetagetable_Sprite2D" type="Sprite2D" parent="."]
 region_enabled = true
