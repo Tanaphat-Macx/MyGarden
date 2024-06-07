@@ -15,6 +15,6 @@ extends Resource
 	set(value):
 		quantity = value
 
-
+# Return name # Use on function get_seed_name in SeedData
 func get_vegetable_name() -> String:
 	return vegetableNameResource.vegetableName

@@ -110,6 +110,26 @@ expand_mode = 1
 stretch_mode = 1
 metadata/_edit_lock_ = true
 
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="DayTimeLabel" parent="HUD" instance=ExtResource("16_4017q")]
+
+[node name="VetShop" parent="HUD" instance=ExtResource("17_r6yqr")]
+visible = false
+
+[node name="Inventory" parent="HUD" instance=ExtResource("17_wtomw")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -140.0
+offset_top = -90.0
+offset_right = -98.0
+offset_bottom = -47.0
+grow_horizontal = 2
+grow_vertical = 0
+
 [node name="Reference" type="Node2D" parent="."]
 visible = false
 
@@ -128,25 +148,6 @@ texture = ExtResource("9_wlwwb")
 [node name="TilesPreview" type="Sprite2D" parent="Reference"]
 position = Vector2(704, 856)
 texture = ExtResource("10_e4oq3")
-
-[node name="HUD" type="CanvasLayer" parent="."]
-
-[node name="DayTimeLabel" parent="HUD" instance=ExtResource("16_4017q")]
-
-[node name="VetShop" parent="HUD" instance=ExtResource("17_r6yqr")]
-
-[node name="Inventory" parent="HUD" instance=ExtResource("17_wtomw")]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -140.0
-offset_top = -90.0
-offset_right = -98.0
-offset_bottom = -47.0
-grow_horizontal = 2
-grow_vertical = 0
 
 [connection signal="on_bed" from="GroundTiles/Game/Interact_Area/Bed" to="." method="_on_bed"]
 [connection signal="plantSeed" from="GroundTiles/Game/Player" to="GroundTiles" method="_on_player_plant_seed"]

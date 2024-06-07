@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ToolData" load_steps=4 format=3 uid="uid://cbetba2ujollw"]
+
+[ext_resource type="Script" path="res://Resource/Tool/tool_data.gd" id="1_rvn7u"]
+[ext_resource type="Texture2D" uid="uid://3giumly1ep3k" path="res://Asset/UI/tool/FishingRod.tres" id="2_i7a27"]
+[ext_resource type="Resource" uid="uid://d1rx6vv800ain" path="res://Resource/Tool/Tool_name/FishingRod.tres" id="3_oea7p"]
+
+[resource]
+script = ExtResource("1_rvn7u")
+toolNameResource = ExtResource("3_oea7p")
+texture = ExtResource("2_i7a27")

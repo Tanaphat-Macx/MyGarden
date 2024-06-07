@@ -4,8 +4,6 @@ const MINUTES_PER_DAY = 1440
 const MINITES_PER_HOUR = 60
 const INGAME_TO_REAL_MINUTE_DURATION = (2 * PI) / MINUTES_PER_DAY
 
-
-
 @onready var daylight: CanvasModulate = %Daylight
 @onready var waterlight: CanvasModulate = %Water
 

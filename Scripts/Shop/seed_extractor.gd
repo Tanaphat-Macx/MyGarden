@@ -6,9 +6,9 @@ extends HBoxContainer
 func _ready() -> void:
 	update_item_containers()
 
-func initialize(vetgetable: VegetableData, seed: SeedData) -> void:
+func initialize(vetgetable: VegetableData, seedData: SeedData) -> void:
 	vetgetableItem = vetgetable
-	seedItem = seedItem
+	seedItem = seedData
 	update_item_containers()
 
 func update_item_containers() -> void:

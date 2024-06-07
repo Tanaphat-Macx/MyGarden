@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://mr3v44g7wn6l"]
+
+[ext_resource type="Texture2D" uid="uid://dxvbxc3t4be7x" path="res://Asset/UI/ItemSlot/1.tres" id="1_wkjn0"]
+[ext_resource type="Script" path="res://Scripts/UI/tool_info.gd" id="2_rgitg"]
+
+[node name="toolInfo" type="TextureRect"]
+custom_minimum_size = Vector2(36, 36)
+offset_right = 32.0
+offset_bottom = 34.0
+texture = ExtResource("1_wkjn0")
+script = ExtResource("2_rgitg")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 22.0
+offset_bottom = 21.0
+scale = Vector2(1.5, 1.5)
+
+[node name="tool" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4

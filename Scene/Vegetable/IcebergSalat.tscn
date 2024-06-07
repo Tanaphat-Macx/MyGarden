@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dj3ukkdvaf758" path="res://Scene/Vegetable/BaseVetgetable.tscn" id="1_8tja6"]
 [ext_resource type="Texture2D" uid="uid://2pebkg0hi36j" path="res://Asset/Objects/Farming Plants.png" id="2_kpu33"]
-[ext_resource type="Resource" uid="uid://dd5djqyprs13g" path="res://Resource/Vegetable_list (ForVegtableShop)/IcebergSalat.tres" id="2_mddr0"]
+[ext_resource type="Resource" uid="uid://dd5djqyprs13g" path="res://Resource/Vegetable_data_list (ForVegtableShop)/IcebergSalat.tres" id="2_mddr0"]
 
 [sub_resource type="Animation" id="Animation_2c2ti"]
 resource_name = "0"

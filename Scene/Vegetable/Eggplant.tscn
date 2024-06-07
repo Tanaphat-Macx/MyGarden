@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://1bhtxvnpx10r"]
 
 [ext_resource type="PackedScene" uid="uid://dj3ukkdvaf758" path="res://Scene/Vegetable/BaseVetgetable.tscn" id="1_khojr"]
-[ext_resource type="Resource" uid="uid://csqna6ptfd3n6" path="res://Resource/Vegetable_list (ForVegtableShop)/Eggplant.tres" id="2_6jpmw"]
+[ext_resource type="Resource" uid="uid://csqna6ptfd3n6" path="res://Resource/Vegetable_data_list (ForVegtableShop)/Eggplant.tres" id="2_6jpmw"]
 [ext_resource type="Texture2D" uid="uid://2pebkg0hi36j" path="res://Asset/Objects/Farming Plants.png" id="2_en3jt"]
 
 [sub_resource type="Animation" id="Animation_gbhuj"]

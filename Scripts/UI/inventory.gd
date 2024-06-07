@@ -10,7 +10,9 @@ extends PanelContainer
 func _ready(): 
 	grid.columns = seedResource.get_size()
 	add_new_slot(seedResource.get_seed_list())
-	
+
+
+#Add slot from resource
 func add_new_slot(seedArray: Array[SeedData]) -> void:
 	for child in seedArray:
 		instant_slot(child)
@@ -19,7 +21,8 @@ func add_new_slot(seedArray: Array[SeedData]) -> void:
 
 	Global_AutoLoad.emit_signal("seed_changed", firstSlot.seedDataResource)
 	changed_selected_slot(firstSlot.position)
-	
+
+
 func _on_slot_selected(value) -> void:
 	changed_selected_slot(value)
 
@@ -36,4 +39,3 @@ func slot_empty(seedData: SeedData) -> void:
 	for child in grid.get_children():
 		if child.seedDataResource == seedData:
 			child.play_flash_slot_empty()
-	

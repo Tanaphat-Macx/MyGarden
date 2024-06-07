@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://Scripts/Shop/seed_extractor.gd" id="1_3m5ea"]
 [ext_resource type="PackedScene" uid="uid://b4mrex4ams415" path="res://Scene/UI/item_info.tscn" id="1_iyk0o"]
-[ext_resource type="Resource" uid="uid://4h1axjbp8f3h" path="res://Resource/Vegetable_list (ForVegtableShop)/Beetroot.tres" id="2_3eb7h"]
 [ext_resource type="Texture2D" uid="uid://djg2m62jtek3e" path="res://Asset/UI/arrowRight.png" id="2_kfck2"]
+[ext_resource type="Resource" uid="uid://4h1axjbp8f3h" path="res://Resource/Vegetable_data_list (ForVegtableShop)/Beetroot.tres" id="2_v16hv"]
+[ext_resource type="Resource" uid="uid://ce08llpm12g84" path="res://Resource/Seed_data/Beetroot.tres" id="3_4ffgk"]
 [ext_resource type="Texture2D" uid="uid://cllciq2w63woj" path="res://Asset/UI/buttons/normal_button.tres" id="3_5c50u"]
-[ext_resource type="Resource" uid="uid://ce08llpm12g84" path="res://Resource/Seed_data/Beetroot.tres" id="3_m0srp"]
 [ext_resource type="Texture2D" uid="uid://bg5156uyo81x1" path="res://Asset/UI/buttons/press_button.tres" id="4_eo5s0"]
 [ext_resource type="FontFile" uid="uid://bxv1q2i8gv11u" path="res://Asset/UI/Font/Kenney Mini Square.ttf" id="5_2k0ws"]
 
@@ -16,8 +16,8 @@ font = ExtResource("5_2k0ws")
 offset_right = 220.0
 offset_bottom = 40.0
 script = ExtResource("1_3m5ea")
-vetgetableItem = ExtResource("2_3eb7h")
-seedItem = ExtResource("3_m0srp")
+vetgetableItem = ExtResource("2_v16hv")
+seedItem = ExtResource("3_4ffgk")
 
 [node name="VetgetableInfo1" parent="." instance=ExtResource("1_iyk0o")]
 layout_mode = 2

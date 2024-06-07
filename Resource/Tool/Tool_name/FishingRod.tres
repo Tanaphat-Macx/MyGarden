@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ToolName" load_steps=2 format=3 uid="uid://d1rx6vv800ain"]
+
+[ext_resource type="Script" path="res://Resource/Tool/tool_name.gd" id="1_k8b35"]
+
+[resource]
+script = ExtResource("1_k8b35")
+ToolName = "Fishing rod"

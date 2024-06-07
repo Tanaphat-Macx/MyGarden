@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ToolData" load_steps=4 format=3 uid="uid://dhv7atc0u1b0h"]
+
+[ext_resource type="Script" path="res://Resource/Tool/tool_data.gd" id="1_ewxyc"]
+[ext_resource type="Texture2D" uid="uid://csiguqdf8udmq" path="res://Asset/UI/tool/Axe.tres" id="2_8omd5"]
+[ext_resource type="Resource" uid="uid://cv66fo1vd25fe" path="res://Resource/Tool/Tool_name/Axe.tres" id="3_w0byj"]
+
+[resource]
+script = ExtResource("1_ewxyc")
+toolNameResource = ExtResource("3_w0byj")
+texture = ExtResource("2_8omd5")

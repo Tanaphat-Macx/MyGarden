@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dj3ukkdvaf758" path="res://Scene/Vegetable/BaseVetgetable.tscn" id="1_yaeny"]
 [ext_resource type="Texture2D" uid="uid://2pebkg0hi36j" path="res://Asset/Objects/Farming Plants.png" id="2_763yc"]
-[ext_resource type="Resource" uid="uid://dblc7facme04m" path="res://Resource/Vegetable_list (ForVegtableShop)/Corn.tres" id="2_pvk10"]
+[ext_resource type="Resource" uid="uid://dblc7facme04m" path="res://Resource/Vegetable_data_list (ForVegtableShop)/Corn.tres" id="2_pvk10"]
 
 [sub_resource type="Animation" id="Animation_5nqod"]
 resource_name = "0"

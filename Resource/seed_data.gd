@@ -19,10 +19,10 @@ func substract_quantity() -> void:
 		
 	quanity_changed.emit(vegetableDataResource.quantity)
 	
-func get_texture() -> Texture: #Return Image
+func get_texture() -> Texture: #Return Image to slotcontainer
 	return vegetableDataResource.texture
 	
-func get_quantity() -> int: #Return Integer
+func get_quantity() -> int: #Return Integer to slotcontainer
 	return vegetableDataResource.quantity
 
 func get_seed_name() -> String: #Return String
