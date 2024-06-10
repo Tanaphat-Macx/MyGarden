@@ -23,10 +23,11 @@ func _on_texture_button_button_down() -> void:
 #func update_quantity() -> void:
 	#item_info.set_label(seedDataResource.get_quantity())
 
-#--> setup method
+#--> setup()
 func _on_quantity_changed(new_quantity) -> void:
 	item_info.set_label(new_quantity)
 
-#Play label animation #--> Inventory
+# Play label animation 
+#--> Inventory
 func play_flash_slot_empty() -> void:
 	$ItemInfo.play_flash_animation()

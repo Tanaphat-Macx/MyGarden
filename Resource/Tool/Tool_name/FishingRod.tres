@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="ToolName" load_steps=2 format=3 uid="uid://d1rx6vv800ain"]
+[gd_resource type="Resource" script_class="ToolName" load_steps=3 format=3 uid="uid://d1rx6vv800ain"]
 
 [ext_resource type="Script" path="res://Resource/Tool/tool_name.gd" id="1_k8b35"]
+[ext_resource type="Texture2D" uid="uid://3giumly1ep3k" path="res://Asset/UI/tool/FishingRod.tres" id="2_x4eap"]
 
 [resource]
 script = ExtResource("1_k8b35")
 ToolName = "Fishing rod"
+texture = ExtResource("2_x4eap")

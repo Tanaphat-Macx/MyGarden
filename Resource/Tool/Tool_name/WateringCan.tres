@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="ToolName" load_steps=2 format=3 uid="uid://ddh8uvr41lgym"]
+[gd_resource type="Resource" script_class="ToolName" load_steps=3 format=3 uid="uid://ddh8uvr41lgym"]
 
 [ext_resource type="Script" path="res://Resource/Tool/tool_name.gd" id="1_h3ynp"]
+[ext_resource type="Texture2D" uid="uid://dch1sb214h54c" path="res://Asset/UI/tool/WateringCan.tres" id="2_rf2p0"]
 
 [resource]
 script = ExtResource("1_h3ynp")
 ToolName = "Watering Can"
+texture = ExtResource("2_rf2p0")

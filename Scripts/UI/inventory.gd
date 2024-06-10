@@ -12,7 +12,8 @@ func _ready():
 	add_new_slot(seedResource.get_seed_list())
 
 
-#Add slot from resource
+#Add slot from resource  
+#--> ready()
 func add_new_slot(seedArray: Array[SeedData]) -> void:
 	for child in seedArray:
 		instant_slot(child)
@@ -23,18 +24,23 @@ func add_new_slot(seedArray: Array[SeedData]) -> void:
 	changed_selected_slot(firstSlot.position)
 
 
-func _on_slot_selected(value) -> void:
-	changed_selected_slot(value)
-
+#--> add_new_slot()
 func changed_selected_slot(slot_pos) -> void:
 	select_texture.position.x = slot_pos.x + $MarginContainer.get_theme_constant("margin_left")
 
+#--> add_new_slot()
 func instant_slot(seedData: SeedData) -> void:
 	var slot = slotScene.instantiate()
 	grid.add_child(slot)
 	slot.connect("slot_selected", _on_slot_selected)
 	slot.setup(seedData)
 
+#--> instant_slot()
+func _on_slot_selected(value) -> void:
+	changed_selected_slot(value)
+
+#--> GridHelper 
+#--> _on_player_plant_seed()
 func slot_empty(seedData: SeedData) -> void:
 	for child in grid.get_children():
 		if child.seedDataResource == seedData:

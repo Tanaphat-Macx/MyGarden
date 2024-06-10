@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://b24pft7dnlxgc"]
+
+[ext_resource type="PackedScene" uid="uid://mr3v44g7wn6l" path="res://Scene/UI/tool_info.tscn" id="1_7kksm"]
+[ext_resource type="Script" path="res://Scripts/UI/tool_slot_container.gd" id="1_c0022"]
+
+[node name="ToolSlotContainer" type="PanelContainer"]
+offset_right = 32.0
+offset_bottom = 34.0
+scale = Vector2(5, 5)
+script = ExtResource("1_c0022")
+
+[node name="toolInfo" parent="." instance=ExtResource("1_7kksm")]
+layout_mode = 2
+
+[node name="ButtonHolder" type="Control" parent="."]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="ButtonHolder"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+
+[connection signal="button_down" from="ButtonHolder/TextureButton" to="." method="_on_texture_button_button_down"]
