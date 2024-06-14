@@ -16,10 +16,8 @@ func _ready():
 #--> ready()
 func add_new_slot(seedArray: Array[SeedData]) -> void:
 	for child in seedArray:
-		instant_slot(child)
-		
+		instant_slot(child)	
 	var firstSlot = grid.get_child(0)
-
 	Global_AutoLoad.emit_signal("seed_changed", firstSlot.seedDataResource)
 	changed_selected_slot(firstSlot.position)
 

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dw5veyugnp1vf"]
+
+[ext_resource type="Script" path="res://Scripts/Components/MoveComponent.gd" id="1_1te7o"]
+
+[node name="Animal" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="State" type="Node" parent="."]
+
+[node name="Walk" type="Node" parent="State"]
+script = ExtResource("1_1te7o")

@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="ToolResource" load_steps=5 format=3 uid="uid://f3bku5pvik11"]
+[gd_resource type="Resource" script_class="ToolResource" load_steps=6 format=3 uid="uid://f3bku5pvik11"]
 
 [ext_resource type="Script" path="res://Resource/Tool/tool_resource.gd" id="1_e0beu"]
+[ext_resource type="Resource" uid="uid://ced3kx3vltkcs" path="res://Resource/Tool/Tool_data/Hand.tres" id="2_bsn01"]
 [ext_resource type="Resource" uid="uid://dhv7atc0u1b0h" path="res://Resource/Tool/Tool_data/Axe.tres" id="2_h23x2"]
 [ext_resource type="Resource" uid="uid://ck0je3xy52c0u" path="res://Resource/Tool/Tool_data/Hoe.tres" id="3_5416u"]
 [ext_resource type="Resource" uid="uid://on1i6vmiuwsd" path="res://Resource/Tool/Tool_data/WateringCan.tres" id="4_v0dfp"]
 
 [resource]
 script = ExtResource("1_e0beu")
-toolList = Array[Resource("res://Resource/Tool/tool_data.gd")]([ExtResource("2_h23x2"), ExtResource("3_5416u"), ExtResource("4_v0dfp")])
+toolList = Array[Resource("res://Resource/Tool/tool_data.gd")]([ExtResource("2_bsn01"), ExtResource("2_h23x2"), ExtResource("3_5416u"), ExtResource("4_v0dfp")])

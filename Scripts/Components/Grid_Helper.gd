@@ -5,7 +5,7 @@ extends TileMap
 @export var player: CharacterBody2D
 @export var grid_helper: Sprite2D
 @export var currentSeed: SeedData
-@onready var inventory: PanelContainer = $"../HUD/Inventory"
+@onready var inventory: PanelContainer = $"../HUD/bottom_bar/Inventory"
 
 var plantedVetgetables: Dictionary = {}
 #var plantedFlowers: Dictionary = {}

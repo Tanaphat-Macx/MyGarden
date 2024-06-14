@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ToolName" load_steps=3 format=3 uid="uid://vsuoihjxy5eo"]
+
+[ext_resource type="Script" path="res://Resource/Tool/tool_name.gd" id="1_u4bt4"]
+[ext_resource type="Texture2D" uid="uid://bkniiw66c1214" path="res://Asset/UI/tool/hand.png" id="2_v00kn"]
+
+[resource]
+script = ExtResource("1_u4bt4")
+ToolName = "Hand"
+texture = ExtResource("2_v00kn")
