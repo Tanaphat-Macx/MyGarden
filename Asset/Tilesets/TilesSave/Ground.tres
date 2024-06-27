@@ -2208,7 +2208,7 @@ texture = ExtResource("4_y1do7")
 
 [resource]
 physics_layer_0/collision_layer = 1
-physics_layer_0/collision_mask = 6
+physics_layer_0/collision_mask = 4
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Grass"
 terrain_set_0/terrain_0/color = Color(0.807843, 0.117647, 0.384314, 1)

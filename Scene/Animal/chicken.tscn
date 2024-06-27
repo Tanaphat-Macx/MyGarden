@@ -1,7 +1,11 @@
-[gd_scene load_steps=63 format=3 uid="uid://c6aglx21yiyjp"]
+[gd_scene load_steps=67 format=3 uid="uid://c6aglx21yiyjp"]
 
 [ext_resource type="PackedScene" uid="uid://dw5veyugnp1vf" path="res://Scene/Animal/Animal.tscn" id="1_wewab"]
 [ext_resource type="Texture2D" uid="uid://cbsoirdc0c3qf" path="res://Asset/Animals/Chicken/chicken default.png" id="2_4prhc"]
+[ext_resource type="Script" path="res://Scripts/Animal/Chicken_2.gd" id="2_xrgda"]
+[ext_resource type="Script" path="res://Scripts/Components/StateMachine/Animal/Animal_idle_state.gd" id="4_m53pj"]
+[ext_resource type="Script" path="res://Scripts/Components/StateMachine/Animal/Animal_wander_state.gd" id="4_ok02y"]
+[ext_resource type="Script" path="res://Scripts/Components/StateMachine/Animal/Animal_follow_state.gd" id="5_0wi8j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jdnae"]
 atlas = ExtResource("2_4prhc")
@@ -459,14 +463,15 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 6.0
+"speed": 8.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_i4rvo"]
-radius = 6.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m8ayo"]
+size = Vector2(11, 10)
 
 [node name="Chicken" instance=ExtResource("1_wewab")]
-collision_layer = 4
+position = Vector2(144, 83)
+script = ExtResource("2_xrgda")
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_awkup")
@@ -474,8 +479,27 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" parent="." index="1"]
-shape = SubResource("CircleShape2D_i4rvo")
+position = Vector2(-1.5, 1)
+shape = SubResource("RectangleShape2D_m8ayo")
 
-[node name="Walk" parent="State" index="0" node_paths=PackedStringArray("actor")]
-actor = NodePath("../..")
-velocity = Vector2(2.08165e-12, 15)
+[node name="Detect_Player" parent="." index="2"]
+collision_layer = 4
+collision_mask = 2
+
+[node name="StateMachine" parent="." index="4" node_paths=PackedStringArray("inintial_state")]
+inintial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine" index="0" node_paths=PackedStringArray("animal")]
+script = ExtResource("4_m53pj")
+animal = NodePath("../..")
+
+[node name="Wander" type="Node" parent="StateMachine" index="1" node_paths=PackedStringArray("animal")]
+script = ExtResource("4_ok02y")
+animal = NodePath("../..")
+
+[node name="Follow" type="Node" parent="StateMachine" index="2" node_paths=PackedStringArray("animal")]
+script = ExtResource("5_0wi8j")
+animal = NodePath("../..")
+
+[connection signal="body_entered" from="Detect_Player" to="." method="_on_detect_player_body_entered"]
+[connection signal="body_exited" from="Detect_Player" to="." method="_on_detect_player_body_exited"]

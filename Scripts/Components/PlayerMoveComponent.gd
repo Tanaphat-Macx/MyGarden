@@ -2,6 +2,9 @@ class_name MoveComponent
 extends CharacterBody2D
 
 signal plantSeed
+signal stop_walk
+signal walk
+
 
 @export var speed: float
 @export var animation_tree: AnimationTree 
@@ -21,7 +24,9 @@ func _physics_process(delta: float) -> void:
 	
 	if direction:
 		velocity = direction * speed
+		emit_signal("walk")		
 	else:
+		emit_signal("stop_walk")
 		velocity = Vector2.ZERO
 		
 	
