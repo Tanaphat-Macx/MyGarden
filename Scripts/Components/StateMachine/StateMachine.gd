@@ -23,7 +23,7 @@ func _process(delta):
 func _physics_process(delta):
 	if current_state:
 		current_state.physics_update_state(delta)
-		print(current_state.name)
+		#print(current_state.name)
 
 func on_state_finish(state, new_state_name):
 	if state != current_state:

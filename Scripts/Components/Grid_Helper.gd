@@ -19,6 +19,8 @@ func _physics_process(delta: float) -> void:
 	var playerMapsCoord = playerMapCoord + Vector2i(playerDir) / 32
 	grid_helper.position = playerMapCoord * 16
 	grid_helper.centered = false
+	print(player.global_position)
+	
 	
 func _on_player_plant_seed() -> void:
 	var cellLocalCoord = local_to_map(grid_helper.position) #Player position on tilemap
@@ -30,6 +32,7 @@ func _on_player_plant_seed() -> void:
 		if not plantedVetgetables.has(cellLocalCoord): 
 			if currentSeed.seed_left():
 				currentSeed.substract_quantity()
+				print(cellLocalCoord)
 				plant_seed(cellLocalCoord)
 			else:
 				inventory.slot_empty(currentSeed)

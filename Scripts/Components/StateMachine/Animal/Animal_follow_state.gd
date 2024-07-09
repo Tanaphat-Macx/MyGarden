@@ -18,5 +18,5 @@ func physics_update_state(delta: float):
 	else:
 		animal.velocity = Vector2()
 
-	if direction.length() > 50:
+	if direction.length() > 80:
 		state_finished.emit(self, "Wander")

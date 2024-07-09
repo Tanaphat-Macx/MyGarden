@@ -1,7 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://cwghw2rnyo1"]
+[gd_scene load_steps=20 format=3 uid="uid://cwghw2rnyo1"]
 
 [ext_resource type="PackedScene" uid="uid://dw5veyugnp1vf" path="res://Scene/Animal/Animal.tscn" id="1_7f7s0"]
 [ext_resource type="Texture2D" uid="uid://cvpvpiycxsqjd" path="res://Asset/Animals/Cow/Light cow animations.png" id="2_axdw1"]
+[ext_resource type="Script" path="res://Scripts/Animal/cow.gd" id="2_lbflv"]
+[ext_resource type="Script" path="res://Scripts/Components/StateMachine/Animal/Animal_idle_state.gd" id="3_xl7hr"]
+[ext_resource type="Script" path="res://Scripts/Components/StateMachine/Animal/Animal_wander_state.gd" id="4_h0ii3"]
+[ext_resource type="Script" path="res://Scripts/Components/StateMachine/Animal/Animal_follow_state.gd" id="5_qq7uc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6s8w1"]
 atlas = ExtResource("2_axdw1")
@@ -97,10 +101,12 @@ animations = [{
 size = Vector2(24, 13)
 
 [node name="Cow" instance=ExtResource("1_7f7s0")]
+script = ExtResource("2_lbflv")
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_ax7of")
-animation = &"walk"
+animation = &"idle"
+autoplay = "idle"
 
 [node name="CollisionShape2D" parent="." index="1"]
 position = Vector2(-1, 6.5)
@@ -108,3 +114,18 @@ shape = SubResource("RectangleShape2D_id4ec")
 
 [node name="Detect_Player" parent="." index="2"]
 visible = false
+
+[node name="StateMachine" parent="." index="3" node_paths=PackedStringArray("inintial_state")]
+inintial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine" index="0" node_paths=PackedStringArray("animal")]
+script = ExtResource("3_xl7hr")
+animal = NodePath("../..")
+
+[node name="Wander" type="Node" parent="StateMachine" index="1" node_paths=PackedStringArray("animal")]
+script = ExtResource("4_h0ii3")
+animal = NodePath("../..")
+
+[node name="Follow" type="Node" parent="StateMachine" index="2" node_paths=PackedStringArray("animal")]
+script = ExtResource("5_qq7uc")
+animal = NodePath("../..")

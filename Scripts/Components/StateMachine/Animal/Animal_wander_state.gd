@@ -36,7 +36,7 @@ func physics_update_state(delta: float):
 		animal.velocity = move_direction * move_speed
 	
 	var direction = player.global_position - animal.global_position
-	if direction.length() < 30:
+	if direction.length() < 40:
 		state_finished.emit(self, "Follow")
 		
 

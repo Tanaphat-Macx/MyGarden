@@ -486,7 +486,7 @@ shape = SubResource("RectangleShape2D_m8ayo")
 collision_layer = 4
 collision_mask = 2
 
-[node name="StateMachine" parent="." index="4" node_paths=PackedStringArray("inintial_state")]
+[node name="StateMachine" parent="." index="3" node_paths=PackedStringArray("inintial_state")]
 inintial_state = NodePath("Idle")
 
 [node name="Idle" type="Node" parent="StateMachine" index="0" node_paths=PackedStringArray("animal")]
@@ -496,10 +496,12 @@ animal = NodePath("../..")
 [node name="Wander" type="Node" parent="StateMachine" index="1" node_paths=PackedStringArray("animal")]
 script = ExtResource("4_ok02y")
 animal = NodePath("../..")
+move_speed = 20.0
 
 [node name="Follow" type="Node" parent="StateMachine" index="2" node_paths=PackedStringArray("animal")]
 script = ExtResource("5_0wi8j")
 animal = NodePath("../..")
+move_speed = 25
 
 [connection signal="body_entered" from="Detect_Player" to="." method="_on_detect_player_body_entered"]
 [connection signal="body_exited" from="Detect_Player" to="." method="_on_detect_player_body_exited"]
